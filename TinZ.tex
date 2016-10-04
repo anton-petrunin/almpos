@@ -1,0 +1,340 @@
+%THAT IS LATEX-file
+\documentclass{article}
+%\usepackage[utf8]{inputenc}
+%\usepackage[russian]{babel}
+\usepackage[active]{srcltx}
+\usepackage{amsmath,amssymb} 
+
+\def\noi{\noindent}%  
+%\def\ts{\thinspace}%  
+\def\i{\subset}%
+\def\CC{\mathbb{C}}%  
+\def\PP{\mathbb{P}}%  
+\def\NN{\mathbb{N}}%  
+\def\RR{\mathbb{R}}%  
+\def\ZZ{\mathbb{Z}}% 
+\def\QQ{\mathbb{Q}}% 
+\def\cC{{\mathcal C}}%  
+\def\cF{{\mathcal F}}%  
+\def\cM{{\mathcal M}}%  
+\def\cS{{\mathcal S}}%  
+\def\cT{{\mathcal T}}%  
+\def\eps{\varepsilon}%  
+\def\a{\alpha}%  
+\def\"#1{{\accent"7F #1\penalty10000\hskip 0pt plus 0pt}} % ! % 
+  
+  
+\begin{document}
+
+\begin{center}
+SMOOTH CASE FOR $Tor\i Z$
+\end{center}
+
+
+{\bf Preliminaries.}
+
+\ 
+
+{\bf Theorem [DDK]}  Let $F$ be a simply finite connected CW-complex and 
+$E_0(F)$ be the connected component of identity of the 
+space of all homotopy equivalences $F\to F$. Then $E_0(F)$ is homotopy equivalent to a CW-complex with finite number of cells in each dimension.
+
+\ 
+
+{\bf Corollary.} Given a finite simply connected CW-complex, there is natural number $n=n(F)$ such that:
+
+ If 
+$\kappa:S^1\times F$ be a one parameter of homotopy equivalences, 
+such that for some $N\in\NN$ we have $\kappa^N:=\kappa(z^N)$ is homotopic to constant along $z$ identity map of $F$, then $\kappa^{n}$ is homotopic to constant along $z$ identity map of $F$.
+
+
+\ 
+
+{\bf Technical Lemma.} 
+Let $F$ be simply connected manifold and $h:D^2\times F\to F$ be 
+$D^2$-family of homothopy equivalences $F\to F$ such that for 
+$x\in\partial D$ we have $h(x,*)=id_F$. 
+Then $\beta_x:D^2\to F$ defined by $\beta_x:u\mapsto h(u,x)$ for a fixed point $x\in F$. 
+Then $[\beta]\in Tor(\pi_2(F))$.
+
+Moreover, given a map $f:D^2\to F$ which is eqaul $x\in F$  on the boundary we have 
+$[h\circ f]-[f]=[\beta]\in Tor(\pi_2(F))$.
+
+
+\ 
+
+
+{\bf Proof.} Assume it is not, then it means that correspondent derivation 
+$$D_h:H^{k+2}(F)\to H^{k}(F)$$
+ has nontrivial element in the second cohomology, i.e. for some 
+$\theta\in H^2(F)$ we have $H^0(F)\ni D_h\theta\not=0$ then
+$D_h\theta^k=k\theta^{k-1}D_h\theta$ so we get that $[\theta^{k-1}]\not=0$ 
+implyes that $[\theta^{k}]\not=0$ therefore for any $k$ we have  
+$[\theta^{k}]\not=0$, therefore $F$ has infinite dimension, a contradiction. $\blacksquare$
+
+\ 
+
+{\bf Part 1.}
+
+\ 
+
+{\bf Claim A.} 
+Let $S^1\to E\to B$ be an orented $S^1$ bundle, the action of $\pi_1(B)$ 
+on $\pi_2(B)$ is trivial. 
+Then  the action of $\pi_1(E)$ on $\pi_2(E)$ is trivial.
+
+\ 
+
+{\bf Proof.} Let $\gamma\in \pi_1(E,p)$ and $\alpha\in \pi_2(E,p)$. 
+Let us denote by $\bar\gamma\in \pi_1(B,\bar p)$ and 
+$\bar\alpha\in \pi_2(B,\bar p)$ their projection to $B$.
+
+From the assumptons we have 
+that there is a homotopy 
+$h:S^2\times S^1\to B$ such that 
+$$h(u,v)=\bar p,\ \ 
+h(u,*)\sim\bar\gamma\ \ \text{ and}\ \ 
+h(*,v)\sim\bar\alpha.$$
+
+The induced bundle $S^1\to E'\to S^2\times S^1$ is trivial, 
+i.e. $E'= S^2\times S^1\times S^1$, therefore the $\alpha^\gamma=\alpha$ 
+for any element in $\gamma\in \pi_1(E')$.$\blacksquare$
+
+
+
+\ 
+
+{\bf Claim B.} Let $F\to E\to B$ be a fiber bundle with 
+simply connected fiber $F$, which admits a trivialization on $1$-skeleton of $B$, $\pi_1(B)$ is almost nilpotent 
+and the action of $\pi_1(B)$ on $\pi_2(B)$ is almost trivial. 
+Then  the action of $\pi_1(E)$ on $\pi_2(E)$ is almost trivial.
+
+\ 
+
+{\bf Proof.} Let $\gamma\in \pi_1(E,p)$ and $\alpha\in \pi_2(E,p)$. 
+Let us denote by $\bar\gamma\in \pi_1(B,\bar p)$ and 
+$\bar\alpha\in \pi_2(B,\bar p)$ their projection to $B$.
+
+From the assumptons we have 
+that there is a homotopy 
+$h:S^2\times S^1\to B$ such that 
+$$h(u,v)=\bar p,\ \ 
+h(u,*)\sim\bar\gamma\ \ \text{ and}\ \ 
+h(*,v)\sim\bar\alpha.$$
+The induced bundle $F\to E'\to S^2\times S^1$ admits a 
+trivialization over $u\times S^1$.
+Let $E''$ be induced bundle $F\to E''\to S^2\times v\i S^2\times S^1$.
+The  monodromy map (arround $S^1$) $f:E''\to E''$
+induces identity map on the base $S^2$ 
+and due the trivialization over $u\times S^1$,
+it  can be chousen to be identity on $F_v$.
+
+Let us consider map $m:D^2\to S^2$ which is homeomorphism 
+inside $D^2$ and $m(\partial D^2)=v$ and fix a trivialization 
+$F\times D^2$ on the induced bundle, let 
+$m':F\times D^2\to E''$ be correspondent mapping, clearly 
+$m'(*,x)$ is an homeomorphism $F\times x$ and the fiber $F_{m(x)}$.
+Then the map $f:E''\to E''$ is completely described by the map 
+$$f':F\times D^2\to F\times D^2 $$ uniquely described by identity
+$m'\circ f'=f\circ m'$. Clearly $f'(*,x)=id_{F\times x}$ 
+for any $x\in\partial D^2$.
+
+Now applying the Technical Lemma we get that there is element 
+$\beta\in Tor(\pi_2(F))$ such that if $i(\beta)=\alpha^\gamma-\alpha$.
+Sinse the bundle is trivial over $S^1$ we get that 
+$i(n\beta)=\alpha^{\gamma^n}-\alpha$ and therefore for $n(F)=|Tor(\pi_2(F))|$ we have 
+$\alpha^{\gamma^{n(F)}}-\alpha=0$. 
+
+Since $\pi_1(B)$ is almost nilpotent we have that its subgroup  $< \gamma^{n(F)}|\gamma\in \pi_1(B)>$ is of finite index.$\blacksquare$
+
+\ 
+
+{\bf Part 2.}
+
+\ 
+
+Now we start to prove that $Tor(\pi_1(M))\i Z(\pi_1(M)$, it is easely follows from the following property: 
+
+\ 
+
+
+{\bf Definition.} A connected manifold $M$ is called {\it reliable} if for any 
+$\tau\in Tor(\pi_1(M,p))$ and for any other element $\gamma\in \pi_1(M,p)$ there is a map of $h:S^1\times S^1\to M$  such that 
+$$h(u,v)= p,\ \ 
+h(u,*)\sim\gamma\ \ \text{ and}\ \ 
+h(*,v)\sim\tau.$$
+and more over there is a finite cover $\iota:\tilde T^2\to :S^1\times S^1$ such that there is a map of solid torus $f:D^2\times S^1\to M$ and an isomorphism $i:\tilde T^2\to \partial D^2\times S^1$ such that $f\circ i=h\circ\iota$.
+
+
+\ 
+
+{\bf Claim AA.} Let $S^1\to E\to B$ be an oriented $S^1$-bundle, the base  $B$ is reliable and the action of $\pi_1(B)$ on $\pi_2(B)$ is almost trivial. 
+Then $E$ is reliable.
+
+\ 
+
+{\bf Proof.} Let $\gamma\in \pi_1(E,p)$ and $\tau\in Tor(\pi_1(E,p))$. 
+Let us denote by $\bar\gamma\in \pi_1(B,\bar p)$ and 
+$\bar\tau\in \pi_1(B,\bar p)$ their projection to $B$.
+
+From the assumptons we have 
+that there is a map 
+$\bar h:S^1\times S^1\to B$ such that 
+$$\bar h(u,v)=\bar p,\ \ 
+\bar h(u,*)\sim\bar\gamma\ \ \text{ and}\ \ 
+\bar h(*,v)\sim\bar\tau,$$
+which satisfy the definition of relable manifold.
+
+Note that sinse $B$ is realabale we have $[h]=0\in H_2(B,\QQ)$. Therefore the induced bundle $S^1\to E'\to S^1\times S^1$ is trivial, in particular $E'=T^3$.
+Therefore there is a lifting $h:S^1\times S^1\to E$ of map $\bar h$ such that
+$$ h(u,v)= p,\ \ 
+ h(u,*)\sim\gamma\ \ \text{ and}\ \ 
+ h(*,v)\sim\tau,$$
+One can consider the covering map $h\circ\iota:\tilde T^2\to E$ and existance of  map 
+$\bar f:D^2\times S^1\to B$ shows that $h\circ\iota$ is homotopic to a map
+$h':\tilde T^2\to E$ which projection to $B$ is the central $S^1$ of 
+$D^2\times S^1$. 
+Therefore there is element $\psi\in\pi_1(B)$ and $\phi\in\pi_1(S^1)$ the fundamental group of fiber, such that $h\circ\iota$ is homotopic to a torus with these generators.
+
+If $\psi=0\in \pi_1(B)$ we can homotopy $h'$ to single $S^1$-fiber, and it gives the needed map of solid torus.
+
+Otherwise, we have $i(\phi)\in Tor(\pi_1(E))$ 
+therefore passing to a finite cover of $\tilde T^2$ 
+if nessesury we get a map of
+disc $D^2\to E$ whic contracts one of generators ($k \phi$) of $\tilde T^2$.
+The projection of this disc to $B$ gives an element $\alpha\in \pi_2(B)$ 
+and sinse $\pi_1(B)$ acting on $\pi_2(B)$ almost trivially we get 
+that passing to finite cover of $\tilde T^2$ again (along $\psi$) we have a map of $\bar g:S^2\times S^1\to B$ with
+$$ 
+ \bar g(u,*)\sim\psi^l\ \ \text{ and}\ \ 
+ \bar g(*,v)\sim\alpha.$$
+We can lift this map to a map $g:D^2\times S^1\to E$ on such a way that $g\circ i=h'\circ \iota$. 
+Which together with homothopy above gives the needed map of 
+$D^2\times S^1\to E$.
+
+
+
+
+
+
+\ 
+
+{\bf Claim BB.} There is $n=n(F,\text{dim}(B))$ such that if $F\to E\to B$ 
+be a fiber bundle with 
+simply connected fiber $F$, reliable base $B$ with nilpotent fundamental group,
+which admits a trivialization on a $1$-skeleton 
+of $B$ then there is a cover $\tilde E$ of the  total space $E$ with at most $n$ folds which is relaeble.
+
+\ 
+
+{\bf Proof.} Let us first describe the plan of the proof:
+
+\ 
+
+1. Use the corollary to prove that there is a finite cover $\widetilde B$ of $B$ with at most $n=n(F,\text{dim}(B))$ folders such that for any two elements $\bar\gamma\in \pi_1(B,\bar p)$ and $\bar\tau\in \pi_1(B,\bar p)$ there is a map 
+$\bar h:S^1\times S^1\to B$ such that 
+$$\bar h(u,v)=\bar p,\ \ 
+\bar h(u,*)\sim\bar\gamma\ \ \text{ and}\ \ 
+\bar h(*,v)\sim\bar\tau,$$
+which satisfy the definition of relable manifold and such that the induced bundle $\bar h^*$ over $S^1\times S^1$ and fiber $F$ is homotopy trivial.
+
+\ 
+
+2. Using techical Lemma we prove that a section over $\bar h:S^1\times S^1\to B$, after finite cover (whci is infact a cover of $\tilde T^2$) can be cotructed by solid torus (i.e. $\widetilde E$ is reliable.
+
+\ 
+
+{\bf Step 1.} Let $\gamma\in \pi_1(E,p)$ and $\tau\in Tor(\pi_1(E,p))$. 
+Let us denote by $\bar\gamma\in \pi_1(B,\bar p)$ and 
+$\bar\tau\in \pi_1(B,\bar p)$ their projection to $B$.
+
+From the assumptons we have 
+that there is a map 
+$\bar h:S^1\times S^1\to B$ such that 
+$$\bar h(u,v)=\bar p,\ \ 
+\bar h(u,*)\sim\bar\gamma\ \ \text{ and}\ \ 
+\bar h(*,v)\sim\bar\tau,$$
+which satisfy the definition of relable manifold.
+
+The  induces bundle $f^*$ over $D^2\times S^1$ 
+is trivial sinse the bundle over $S^1$ is. 
+Consider induced bundle $\bar h^*$ over $S^1\times S^1$. 
+After finite cover $\iota:\tilde T^2\to S^1\times S^1$ the induced bundle 
+$(\bar h \circ \iota)^*$ over $\tilde T^2$ becomes trivial, sinse it is also can be induced induced bundle for $i:\tilde T^2\to D^2\times S^1$.
+The bundle over $S^1\times S^1$ admits a trivialization on 1-skeleton 
+for the stadard CW-structure. 
+Therefore it can be induced from a bundle on $S^2$ and a map of degree 1 
+which sends 1-skeleton of $S^1\times S^1$ to a single point of $S^2$. 
+Such a bundle can be described by a one-parameter family of homeomorphisms 
+$\kappa:S^1\times F\to F$. 
+Note that homotopy type of this map does NOT depend on the choice of 
+trivialization over 1-skeleton of $S^1\times S^1$.
+Since the induced bundle over $\tilde T^2$ is trivial we have that 
+if $ \iota: \tilde T^2\to S^1\times S^1$ is an $N$-fold cover then 
+$\kappa^N:S^1\times F\to F$ is homotopic to map $(z,x)\mapsto x$
+therefore applying the Corollary we get that infact $\kappa^{n(F)}$ 
+is homotopic to constant along $(z,x)\mapsto x$.
+
+From this it is clear that there ia a finite cover $\widetilde B$ of $B$ with at most $n'=n'(F,\text{dim}(B))$ folders such that for any two elements $\bar\gamma\in \pi_1(B,\bar p)$ and $\bar\tau\in \pi_1(B,\bar p)$ there is a map 
+$\bar h:S^1\times S^1\to B$ such that 
+$$\bar h(u,v)=\bar p,\ \ 
+\bar h(u,*)\sim\bar\gamma\ \ \text{ and}\ \ 
+\bar h(*,v)\sim\bar\tau,$$
+and such that the induced bundle $\bar h^*$ over $S^1\times S^1$ and fiber $F$ is homotopy trivial.
+
+\ 
+
+Let us pass to this covering (i.e. now $B:=\widetilde B$) and continue.
+
+\ 
+
+{\bf Step 2.} Let us summarize what we have:
+
+\noi
+1. The  induced bundle $f^*$ over $D^2\times S^1$ is trivial sinse the bundle over $S^1$ is. 
+
+\noi
+2. There is yet an other homotopic trivialization over $\partial D^2\times S^1=\widetilde T^2$ which is induced from homotopic trivialization on $S^1\times S^1$.
+
+Such a pair of trivializations can be charcterised by homotopy type of $\hat h:D^2\times F\to F$, a
+$D^2$-family of homothopy equivalences $F\to F$ such that for 
+$x\in\partial D$ we have $\hat h(x,*)=id_F$, it can be constructed by lifting homotopy $D^2\times S^1\to B$ to a homotopy to $m:D^2\times F\times \RR\to E$ (here $S^1=\RR/\ZZ$ on such a way that on its boundary $\partial D^2\times F$ it goes along the trivialization over $\partial D^2\times S^1=\widetilde T^2$.
+Then defining  $\hat h(u,x)=\pi_F\circ m(u,x,1)$ for all $u\in D^2$ and $x\in F$.
+
+Let us take a horisontal section over $S^1\times S^1$ it is covered by a section over $\widetilde T^2$. 
+First lets us extend this section over $D^2\times u$ for $u\in S^1$, it is possible sinse $F$ is simply connected.
+ According to the Technical Lemma we have that $[s(D^2,2\pi)]-[m(D^2,0)]=\beta\in Tor(\pi_1(F))$
+therefore  
+$[m(D^2,2\pi n)]-[m(D^2,0)]=[m(D^2,2\pi)]^n-[m(D^2,0)]=n\beta=0\in Tor(\pi_1(F))$
+for some $n$. In particular after $n$-fold cover of $\widetilde T^2$ it has a section which can be cotructed by solid torus.
+
+
+\bibliographystyle{alpha}
+\begin{thebibliography}{HMR75}
+\bibitem[DDK]{DDK}{Dror, E. and Dwyer, W. G. and Kan, D. M.},
+ \textit{Self-homotopy equivalences of virtually nilpotent spaces},
+{Comment. Math. Helv.},
+{56},
+{1981},
+{4},
+pp. {599--614},
+\end{thebibliography}
+\end{document}
+
+@article {MR84h:55005,
+    AUTHOR = {Dror, E. and Dwyer, W. G. and Kan, D. M.},
+     TITLE = {Self-homotopy equivalences of virtually nilpotent spaces},
+   JOURNAL = {Comment. Math. Helv.},
+  FJOURNAL = {Commentarii Mathematici Helvetici},
+    VOLUME = {56},
+      YEAR = {1981},
+    NUMBER = {4},
+     PAGES = {599--614},
+      ISSN = {0010-2571},
+     CODEN = {COMHAX},
+   MRCLASS = {55P10},
+  MRNUMBER = {84h:55005},
+MRREVIEWER = {Clarence Wilkerson},
+}
+
+

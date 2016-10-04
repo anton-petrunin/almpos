@@ -1,0 +1,76 @@
+\usepackage{latexsym}
+%\usepackage{epsfig,lpic}
+\numberwithin{equation}{subsection}
+\usepackage{amscd}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{enumerate}
+\usepackage{verbatim}
+% Some personalized definitions
+
+
+
+\def\DD{\mathbb{D}}%
+\def\cM{{\mathcal M}}%
+\def\eps{\varepsilon}%
+\def\phi{\varphi}
+\def\ts{\thinspace}%
+\def\ge{\geqslant}%
+\def\le{\leqslant}%
+
+\def\dil{\operatorname{\rm dil}}
+\def\DIL{\operatorname{\rm DIL}}
+\def\dist{\operatorname{\rm dist}}
+\def\length{\operatorname{\rm length}}
+\def\Inn{\operatorname{\rm Inn}}
+\def\Aut{\operatorname{\rm Aut}}
+\def\Out{\operatorname{\rm Out}}
+\def\diam{\operatorname{\rm diam}}
+\def\GHto{\buildrel \mathrm{GH} \over \longrightarrow}
+
+
+\mathsurround=1pt
+
+\newtheorem{thm}{Theorem}[subsection]
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{quest}[thm]{Question}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{conj}[thm]{Conjecture}
+\newtheorem{mconj}[thm]{Main Conjecture}
+\newtheorem{prob}[thm]{Problem}
+\newtheorem{property}[thm]{Property}
+\newtheorem{klem}[thm]{Key Lemma}
+\newtheorem{slem}[thm]{Sublemma}
+\newtheorem{tlem}[thm]{Trivial Lemma}
+\newtheorem{techlem}[thm]{Technical Lemma}
+\newtheorem{claim}[thm]{Claim}
+\newtheorem{Example}[thm]{Example}
+
+\newenvironment{ex}{\begin{Example}\rm}{\end{Example}}
+%
+\newtheorem{Counterexample}[thm]{Counterexample}
+\newenvironment{coex}{\begin{Counterexample}\rm}{\end{Counterexample}}
+%
+\newtheorem{remark}[thm]{Remark}
+\newenvironment{rmk}{\begin{remark}\rm}{\end{remark}}
+%
+\newtheorem{Fact}[thm]{Fact}
+\newenvironment{fact}{\begin{Fact}\rm}{\end{Fact}}
+%
+\newtheorem{Nothing}[thm]{$\!\!\!$}
+\newenvironment{nothing}{\begin{Nothing}\rm}{\end{Nothing}}
+
+
+\newtheorem{main}{Theorem}
+%\newtheorem*{conjecture}{Conjecture}
+%\newtheorem{cor}[main]{Corollary}
+\newtheorem{propm}[main]{Proposition}
+\renewcommand{\themain}{\Alph{main}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand*{\z}[1]{#1\nobreak\discretionary{}%
+            {\hbox{$\mathsurround=0pt #1$}}{}}
