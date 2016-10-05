@@ -2151,7 +2151,8 @@ Consider the map $\beta_x\colon \DD\to F$ defined by $\beta_x\colon u\mapsto h(u
 Then $[\beta_x]\in \mathrm{Tor}(\pi_2F)$.
 
 Moreover, given a map $f\colon \DD\to F$ such that $f(u)=x$ for any $u\in\partial \DD$, we have 
-$[h\circ f]-[f]=[\beta]\in \mathrm{Tor}(\pi_2F)$.
+$[f_h]-[f]=[\beta]\in \mathrm{Tor}(\pi_2F)$, 
+where $f_h(u)=h(u,f(u))$. 
 \end{techlem}
 
 \begin{proof}[Proof.] Assume contrary. 
@@ -2197,7 +2198,7 @@ for any element in $\gamma\in \pi_1E'$.
 \end{proof}
 
 \begin{claim}
-Let $F\to E\to B$ be a fiber bundle with 
+Let $F\xrightarrow{i} E\to B$ be a fiber bundle with 
 simply connected fiber $F$, which admits a trivialization on $1$-skeleton of $B$. Assume $\pi_1B$ is almost nilpotent 
 and the action of $\pi_1B$ on $\pi_2B$ is almost trivial. 
 Then  the action of $\pi_1E$ on $\pi_2E$ is almost trivial.
@@ -2231,13 +2232,15 @@ $m'\colon F\times \DD\to E''$ be correspondent mapping.
 Clearly 
 $m'(*,x)$ is a homeomorphism $F\times x$ and the fiber $F_{m(x)}$.
 Then the map $f\colon E''\to E''$ is completely described by the map 
-$$f'\colon F\times \DD\to F\times \DD $$ uniquely described by identity
-$m'\circ f'=f\circ m'$. Clearly $f'(*,x)=\mathrm{id}_{F\times x}$ 
+$$f'\colon F\times \DD\to F\times \DD$$ 
+which is uniquely described by identity $m'\circ f'=f\circ m'$. 
+Clearly $f'(*,x)=\mathrm{id}_{F\times x}$ 
 for any $x\in\partial \DD$.
 
 By Technical Lemma, there is an element 
-$\beta\in \mathrm{Tor}(\pi_2F)$ such that if $i(\beta)=\alpha^\gamma-\alpha$.
-Sinse the bundle is trivial over ${\Bbb S}^1$,
+$\beta\in \mathrm{Tor}(\pi_2F)$ such that 
+\[i(\beta)=\alpha^\gamma-\alpha.\]
+Since the bundle is trivial over ${\Bbb S}^1$,
 \[i(n\cdot \beta)=\alpha^{\gamma^n}-\alpha\] and therefore for $n(F)=|\mathrm{Tor}(\pi_2F)|$ we have 
 $\alpha^{\gamma^{n(F)}}-\alpha=0$. 
 
