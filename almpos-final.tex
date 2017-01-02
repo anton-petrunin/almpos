@@ -1591,7 +1591,7 @@ $\bar{F}_i(p)$ of $F_i(p)$
 corresponding to $G_i$ is Hausdorff close to a unit circle ${\Bbb S}^{1}$.
 
 
-Construct now a bundle map $\phi_p\colon \bar F_i(p)\to S^{1}$
+Construct now a bundle map $\phi_p\colon \bar F_i(p)\to \mathbb{S}^{1}$
 by lifting distance functions from ${\Bbb S}^{1}$
 %using 1-strainers coming from ${\Bbb S}^{1}$
 (This can be done by a slight generalization
@@ -2096,15 +2096,13 @@ Can one give an explicit bound on $C(m)$ in Theorem ~\ref{intro:main2}?
 
 In this appendix we prove that the Main Conjecture \ref{con:tor} holds if all the Alexandrov spaces $A_i$ which appear in the construction in  Section \ref{sec:constr} are closed Riemannian manifolds.
 We would be very interested to know if a proof different from the one given below can be found.
-%Let us know if you find a proof different from the one below. 
-{\color{red} Throughout this section all spaces $E_i,B_i,F_i$ are finite CW-complexes. !!! This is so  as not to say "compact" all the time and have all fundamental groups to be finitely generated!!!}
 
 \subsection{}
 Note that by Yamaguchi's theorem, the statement can be reformulated using purely topological language.
 
 
 \begin{thm}
-Let $F_1,F_2,...,F_n$ be an array of manifolds 
+Let $F_1,F_2,...,F_n$ be an array of compct manifolds 
 such that each $F_i$ is either ${\Bbb S}^{1}$ or is simply connected. 
 Assume $E$ is the total space of a tower of fiber bundles over point
 $$E=E_n\buildrel {F_n}\over \longrightarrow E_{n-1}\buildrel {F_{n-1}}\over\longrightarrow...\buildrel {F_1}\over\longrightarrow E_0=\{pt\}$$
@@ -2146,7 +2144,7 @@ Hence the corollary follows.
 Further we denote by $\DD$ the closed unit disc in the complex plane.
 
 \begin{techlem}\label{techlem}
-Let $F$ be a simply connected manifold and $h\colon \DD\times F\z\to F$ be 
+Let $F$ be a compact simply connected manifold and $h\colon \DD\times F\z\to F$ be 
 $\DD$-family of homotopy equivalences $F\to F$ such that $h(u,*)=\mathrm{id}_F$ for any
 $u\in\partial \DD$. 
 Consider the map $\beta_x\colon \DD\to F$ defined by $\beta_x\colon u\mapsto h(u,x)$ for a fixed point $x\in F$. 
@@ -2159,8 +2157,9 @@ where $f_h(u)=h(u,f(u))$.
 
 \begin{proof}[Proof.] Assume the contrary. 
 
-The map $h$ induces a map $S^2\times F\to F$ which with a  slight abuse of notation we'll still denote by $h$. Consider the induced map on cohomology
-$H^{*+2}(F)\overset{h^*}{\longrightarrow} H^{*+2}(S^2\times F)\to H^*(F)\otimes H^2(S^2)\cong  H^*(F)$ where the second map is the projection coming from the K\"unneth isomorphism.
+The map $h$ induces a map $\mathbb{S}^2\times F\to F$ which with a  slight abuse of notation we'll still denote by $h$. 
+Consider the induced map on cohomology
+$H^{*+2}(F)\overset{h^*}{\longrightarrow} H^{*+2}(\mathbb{S}^2\times F)\to H^*(F)\otimes H^2(\mathbb{S}^2)\cong  H^*(F)$ where the second map is the projection coming from the K\"unneth isomorphism.
 We'll denote the resulting map $H^{*+2}(F)\to H^*(F)$ by $D_h$. It's easy to see that it's an algebra derivation on $H^*(F)$. The same obviously holds true for $D_h^\QQ\colon H^{*+2}(F,\QQ)\to H^*(F,\QQ)$
 
 %Then it the correspondent derivation 
@@ -2181,14 +2180,15 @@ Therefore
 \quad[\theta^{k}]\ne0.\]
 Therefore $[\theta^{k}]\not=0$ for any positive integer $k$.
 In particular, $F$ has infinite dimension, a contradiction. 
-Thus, $D^\QQ_h|_{H^2(F,\QQ)}\equiv 0$. Hence, $D_h|_{H^2(F)}\equiv 0$ and therefore $h^*=pr_2^*$ on $H^2(F)$ where $pr_2\colon S^2\times F\to F$ is the second coordinate projection. This  easily implies the statement of the Lemma.
+Thus, $D^\QQ_h|_{H^2(F,\QQ)}\equiv 0$. Hence, $D_h|_{H^2(F)}\equiv 0$ and therefore $h^*=pr_2^*$ on $H^2(F)$ where $pr_2\colon \mathbb{S}^2\times F\to F$ is the second coordinate projection. 
+This  easily implies the statement of the Lemma.
 \end{proof}
 
 
 \subsection{}
 
 \begin{claim}
-Let ${\Bbb S}^1\to E\to B$ be an orented ${\Bbb S}^1$-bundle.
+Let ${\Bbb S}^1\to E\to B$ be an oriented ${\Bbb S}^1$-bundle over a compat manifold $B$.
 Assume that the action of $\pi_1B$ 
 on $\pi_2B$ is trivial. 
 Then  the action of $\pi_1E$ on $\pi_2E$ is trivial.
@@ -2212,7 +2212,9 @@ for any element in $\gamma\in \pi_1E'$.
 
 \begin{claim}
 Let $F\xrightarrow{i} E\to B$ be a fiber bundle with 
-simply connected fiber $F$, which admits a trivialization on $1$-skeleton of $B$. Assume $\pi_1B$ is almost nilpotent 
+simply connected fiber $F$ over a compat manifold $B$, 
+which admits a trivialization on $1$-skeleton of $B$. 
+Assume $\pi_1B$ is almost nilpotent 
 and the action of $\pi_1B$ on $\pi_2B$ is almost trivial. 
 Then  the action of $\pi_1E$ on $\pi_2E$ is almost trivial.
 \end{claim}
@@ -2271,7 +2273,7 @@ has finite index.
 
 
 \begin{defn}
-A connected manifold $M$ is called \emph{reliable} if 
+A compact connected manifold $M$ is called \emph{reliable} if 
 \begin{enumerate}
 \item \label{reliable1} For any 
 $\tau\in \mathrm{Tor}(\pi_1(M,p))$ and for any other element $\gamma\in \pi_1(M,p)$ there is a map of $h\colon {\Bbb S}^1\times {\Bbb S}^1\to M$  such that 
@@ -2433,40 +2435,40 @@ Let us summarize what we have:
 
 
 
-This pair of trivializations can be characterized by homotopy type of a
-$\DD$-family of homotopy equivalences $F\to F$
-\[\hat h\colon \DD\times F\to F\]
-such that for 
-$x\in\partial \DD$ we have $\hat h(x,*)=\mathrm{id}_F$.
-In order to construct $\hat h$, 
-lift the homotopy $\DD\times {\Bbb S}^1\to B$ to a homotopy 
+Let us lift the homotopy $\DD\times {\Bbb S}^1\to B$ to a homotopy 
 $m\colon \DD\times F\times {\Bbb R}\to E$ 
 (here ${\Bbb S}^1={\Bbb R}/{\Bbb Z}$) on such a way that on its boundary $\partial \DD\times F$ it goes along the second trivialization over $\partial \DD\times {\Bbb S}^1=\widetilde T^2$.
-Fix $y\in F$. 
-For all $u\in \DD$ and integer $n$, define 
-\[\hat h(u,n)=\pi_F\circ m(u,y,n),\] 
-where $\pi_F$ denotes the projection to $F$-fractor in the first trivialization.
+For all $u\in \DD$ and  $x\in F$, define $\hat h\colon\DD\times F\to F$ as the (nececary unique) map such that 
+\[m(u,x,0)=m(u,\hat h(x),1).\] 
+Note that $\hat h(u,x)=x$ for any $u\in\partial \DD$ and $x\in F$;
+it means that we can apply Technical Lemma (\ref{techlem}) for $\hat h$.
 
-Take a horizontal section over ${\Bbb S}^1\times {\Bbb S}^1$ in the second trivialization thru $y\in F$; 
-it is covered by a section over $\widetilde T^2$. 
-Extend this section over $\DD\times w$ for $w\in {\Bbb S}^1$;
-it is possible since $F$ is simply connected.
-According to the Technical Lemma (\ref{techlem})
-\[[\hat h(\DD,1)]-[\hat h(\DD,0)]
-=
-\beta\in \mathrm{Tor}(\pi_1F).\]
-Therefore  
-\begin{align*}
-[\hat h(\DD,n)]-[\hat h(\DD,0)]
-&=
-[\hat h(\DD,1)]^n-[\hat h(\DD,0)]=
-\\&=
-n{\cdot}\beta=
-\\
-&=0\in \mathrm{Tor}(\pi_1F)
-\end{align*}
-for some $n$. 
-In particular after $n$-fold cover of $\widetilde T^2$ it has a section which can be contracted by a solid torus.
+Fix $x\in F$, $w\in {\Bbb S}^1$.
+Since $F$ is simply connected, we can choose a conitnuous map $f\:\colon \DD\to F$ such that $f(u)=x$ for any $u\in \partial \DD$.
+Recall that $f_{\hat h}(u)= \hat h(u,f(u))$
+and by Technical Lemma (\ref{techlem})
+\begin{equation}
+\label{eq:in-Tor}
+[f_{\hat h}]-[f]=[\beta_x]\in \mathrm{Tor}(\pi_2F)
+\end{equation}
+
+
+Consider the sequence of maps $f^n\colon \DD\to F$ defined recurcevly, $f^0=f$ and $f^{n+1}=f^n_{\hat h}$.
+By (\ref{eq:in-Tor}),
+\begin{equation}
+\label{eq:in-Tor-n}
+[f^n]-[f^0]=n\cdot\beta_x=0
+\end{equation}
+for some positive integer $n$.
+
+Note that 
+$m(u,f^0(u),n)=m(u,f^n(u),0)$.
+In particular, by (\ref{eq:in-Tor-n}),
+the two maps $\DD\to E$ given by $u\mapsto m(u,f(u),0)$ and $u\mapsto m(u,f(u),n)$ are homotopic rel. to $\partial \DD$;
+denote by $s_t$, $t\in[0,1]$ the homotopy.
+It follows that after $n$-fold cover of $\widetilde T^2$ it has a section which can be contracted by a solid torus;
+the maps solid torus is a concatination of $(u,t)\mapsto m(u,f(u),t)$ for $t\in[0,n]$ 
+and $(u,t)\to s_t(u)$ for $t\in[0,1]$. 
 \end{proof}
 
 
