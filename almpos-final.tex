@@ -73,7 +73,7 @@ which we will employ throughout this article.
 A closed smooth manifold $M$ is called almost nonnegatively curved
 if it admits a sequence of Riemannian metrics $\{g_n\}_{n\in\mathbb{N}}$
 whose sectional curvatures and diameters have the following bounds
-$$\sec(M,g_n)\ge -1/n\ \ \ \text{and} \ \ \ \diam(M,g_n)\le 1/n.$$
+$$\sec(M,g_n)\ge -1/n\quad\text{and}\quad\diam(M,g_n)\le 1/n.$$
 \end{defn}
 
 Almost nonnegatively curved manifolds
@@ -432,7 +432,7 @@ For a tangent vector $v$ at $p$ we define its absolute value $|v|$
 as the distance $|ov|$ in $T_p$.
 For two tangent vectors $u$ and $v$ at $p$ we can define
 their ``scalar product''
-$$\langle u, v\rangle=(|u|^2+|v|^2-|uv|^2)/2=|u|{\cdot} |v|\cdot \cos\alpha,$$ where $\alpha=\angle uov$ in $T_p$.
+$$\langle u, v\rangle=(|u|^2+|v|^2-|uv|^2)/2=|u|{\cdot} |v|{\cdot} \cos\alpha,$$ where $\alpha=\angle uov$ in $T_p$.
 
 For two points $p,q\in A$ we define $\log_pq$ to be a tangent vector $v$
 at $p$
@@ -442,16 +442,16 @@ direction of $v$ coincides with a direction from $p$ to $q$
 Given a curve $\gamma(t)$ in $A$, we denote by $\gamma^+(t)$
 the right and by
 $\gamma^-(t)$ the left tangent vectors to  $\gamma(t)$, where, respectively,
-$$\gamma^\pm(t)\in T_{\gamma(t)},\ \ \ \gamma^\pm(t)=\lim_{\eps\to +0}\frac{\log_{\gamma(t)}\gamma(t\pm\eps)}{\eps}.$$
+$$\gamma^\pm(t)\in T_{\gamma(t)},\quad\gamma^\pm(t)=\lim_{\eps\to +0}\frac{\log_{\gamma(t)}\gamma(t\pm\eps)}{\eps}.$$
 For a real function $f(t)$, $t\in \mathbb{R}$, we denote by  $f^+(t)$ its right derivative and by $-f^-(t)$ its left derivative. Note that our sign convention (which is chosen to agree with the notion of right and left derivatives of curves) is not quite standard. For example,
-$$ \ \ \text{if}\ \ f(t)=t \ \ \text{then}\ \ f^+(t)\equiv 1 \ \ \text{and}\ \ f^-(t)\equiv -1.$$
+$$\text{if}\quad f(t)=t\quad\text{then}\quad f^+(t)\equiv 1\quad\text{and}\quad f^-(t)\equiv -1.$$
 
 
 \begin{defn}Given a $\lambda$-concave function $f$ on $A$,
 a vector $g\in T_p(A)$ is called a gradient of $f$ at $p\in A$
 (in short:  $g=\nabla_p f$) if
 
-(i) $d_pf(x)\le \langle g , x\rangle\ \hbox{for any}\ x\in T_p$, and
+(i) $d_pf(x)\le \langle g , x\rangle$ for any $x\in T_p$, and
 
 (ii) $d_pf(g) = \langle g,g \rangle .$
 \end{defn}
@@ -495,7 +495,8 @@ $$\alpha^+(t)=\nabla_{\alpha(t)}f.$$
 
 Moreover, if $\alpha$ and $\beta$ are two $f$-gradient curves, then
 $$|\alpha(t_1)\beta(t_1)|\le |\alpha(t_0)\beta(t_0)|{\cdot} \exp(\lambda{\cdot}  (t_1-t_0))
-\ \ \text{for all}\ \ t_1\ge t_0.$$
+\quad\text{for all}\quad
+t_1\ge t_0.$$
 
 \end{prop}
 
@@ -527,7 +528,7 @@ For any $\lambda$-concave function $f$ on $A$
 the function 
 $$p\mapsto|\nabla_pf|$$ 
 is lower semicontinuous;
-that is, for any sequence of points $p_n\in A,\  p_n\to p$, we have
+that is, for any sequence of points $p_n\in A$, $p_n\to p$, we have
 $$|\nabla_p f|\le \liminf_{n\to \infty} |\nabla_{p_n} f|.$$
 
 \end{cor}
@@ -538,11 +539,14 @@ $$\frac{f(q)-f(p)}{|pq|}> |\nabla_p f|-\eps.$$
 Now choose $q_n\in A_n$ such that $q_n\to q$.
 If $|pq|$ is sufficiently small and $n$ is
 sufficiently large,  the $\lambda$-concavity of $f_n$ then implies that
-$$\liminf_{n\to \infty}\frac{d_{p_n}f_n(v_n)}{|v_n|}\ge |\nabla_p f|-2{\cdot} \eps \ \ \text{for}\ \  v_n=
-\log_{p_n}(q_n)\in T_{p_n}(A_n).$$
+$$\liminf_{n\to \infty}\frac{d_{p_n}f_n(v_n)}{|v_n|}\ge |\nabla_p f|-2{\cdot} \eps
+\quad\text{for}\quad 
+v_n=\log_{p_n}(q_n)\in T_{p_n}(A_n).$$
 Therefore,
 $$\liminf_{n\to \infty} |\nabla_{p_n} f_n|\ge
-|\nabla_p f|-2{\cdot} \eps \ \ \text{for any}\ \ \eps>0;$$
+|\nabla_p f|-2{\cdot} \eps
+\quad\text{for any}\quad
+\eps>0;$$
 that is,
 $$\liminf_{n\to \infty} |\nabla_{p_n} f_n|\ge
 |\nabla_p f|. $$
@@ -631,15 +635,15 @@ Therefore, by Lemma \ref{lem:gradcon},
 &\ge\int_a^b|\nabla_{\bar\beta(s)} f|{\cdot}ds\ge
 \\
 &\ge
-\int_a^b d_{\beta(t)} f(\beta^+(t)){\cdot}dt=f\circ\beta|_a^b.
+\int_a^b d_{\beta(t)} f(\beta^+(t)){\cdot} dt=f\circ\beta|_a^b.
 \end{align*}
 
 On the other hand, since $\bar\alpha_n\to\bar\beta$ and $f_n\to f$ we have
 $f_n\circ\bar\alpha_n|_a^b \to f\circ\bar\beta|_a^b$.
 Therefore, in both of these inequalities in fact equality holds.
 
-Hence, $|\nabla_{\bar\beta(s)} f|= \lim_{n\to\infty} |\nabla_{\bar\alpha_n(s)} f_n|,\ \
-|\bar\beta^+(s)|= 1$
+Hence, $|\nabla_{\bar\beta(s)} f|= \lim_{n\to\infty} |\nabla_{\bar\alpha_n(s)} f_n|$,
+$|\bar\beta^+(s)|= 1$
 and the directions of $\bar\beta^+(s)$ and  $\nabla_{\bar\beta(s)} f$
 coincide almost everywhere.
 This implies that $\bar\beta(s)$ is a gradient curve reparameterized by
@@ -665,7 +669,12 @@ and the convergence $f_n\circ\bar\alpha_n\to f\circ\bar\alpha.$
 \
 
 Let $A$ be an Alexandrov space and let $S\subset A$ be a subset of $A$. A function $f\colon A\to \mathbb{R}$  which can be represented as
-$$f=\sum_i \theta_i{\cdot} \frac{\dist^2_{a_i}}{2}\ \ \text{with }\ \  \theta_i\ge 0,\ \  \sum_i \theta_i=1\ \ \text{and}\ \ a_i\in S$$
+$$f=\sum_i \theta_i{\cdot} \frac{\dist^2_{a_i}}{2}
+\quad\text{with }\quad
+\theta_i\ge 0,\quad
+\sum_i \theta_i=1
+\quad\text{and}\quad
+a_i\in S$$
 will be called {\sl cocos-function with respect to $S$}
 (where ``cocos'' stands for
 {\bf co}nvex {\bf co}mbination of {\bf s}quares of distance functions).
@@ -718,8 +727,7 @@ $a_{k-1}b_{k-1}$
 and $b_{k}$
 to be a farthest point from $a_{k}$
 such that $|a_ib_{k}|=|a_ia_{k}|$ for all $i< k$  and
-$|a_{k}b_{k}|\le
-\delta{\cdot}|a_{k-1}b_{k-1}|$.
+$|a_{k}b_{k}|\le\delta{\cdot}  |a_{k-1}b_{k-1}|$.
 
 After $m$ steps, take $p$ to be a midpoint of $a_mb_m$.
 We only have to check that we can find $T=T(m)$
@@ -776,15 +784,15 @@ Next choose $\gamma_2$ to have
 minimal norm in $\Gamma\backslash \langle\gamma_1\rangle$.
 On the $n$-th step choose
 $\gamma_n$ to have minimal norm in
-$\Gamma\backslash \langle\gamma_1,\gamma_2,...,\gamma_{n-1}\rangle$.
-The sequence $\{\gamma_1,\gamma_2,...\}$
+$\Gamma\backslash \langle\gamma_1,\gamma_2,\dots,\gamma_{n-1}\rangle$.
+The sequence $\{\gamma_1,\gamma_2,\dots\}$
 is called a \emph{short basis} of $\Gamma$ at $p$.
 In general, the number of elements of a short basis can be finite or infinite.
 In the special case of the action of the fundamental group $\pi_1(A,p)$  on the universal cover of $A$
  one speaks of the short basis of  $\pi_1(A,p)$.
 
 It is easy to see that for a short basis
-$\{\gamma_1,\gamma_2,...\}$ of the fundamental group of an Alexandrov space $A$
+$\{\gamma_1,\gamma_2,\dots\}$ of the fundamental group of an Alexandrov space $A$
 the following is true:
 \begin{enumerate}
 \item If $A$ has diameter $d$ then $|\gamma_i|\le 2{\cdot} d$.
@@ -883,7 +891,7 @@ and $n$ is sufficiently large,  Lemma~\ref{l:key} implies that
 $$|\!|\Phi^*_n(\omega)|\!|_{n,r_2}
 \le
 (1+\eps){\cdot}|\!|\omega |\!|_{n,r_1}
-\quad\text{and}\quad 2{\cdot} \diam(M_n)\le r_2-r_1.$$
+\quad\text{and}\quad2{\cdot} \diam(M_n)\le r_2-r_1.$$
 
 If now $\omega$ is a form on
 $B_{r_2}(p_n)\in \tilde M_n$ and
@@ -930,13 +938,13 @@ $n\times n$ matrices. By the above,
 all elements of $\bar{B}$ satisfy that the absolute values of all
 of their eigenvalues are equal to 1.
 
-Consider now the space $V=\mathbb{R}^{k{\cdot} n^{2}}$ of
+Consider now the space $V=\mathbb{R}^{k{\cdot}n^{2}}$ of
 $k$-tuples of real $n\times n$ matrices.
 
-Consider a  collection of matrices $(M_1,M_2,...,M_k)\in V$,
+Consider a  collection of matrices $(M_1,M_2,\dots,M_k)\in V$,
 where $M_i\in \mathrm{GL}(n,\mathbb{R})$.
 Let $F_k$ be a free group on $k$ generators,
-generated by $S=\{\gamma_1,\gamma_2,...,\gamma_k\}$,
+generated by $S=\{\gamma_1,\gamma_2,\dots,\gamma_k\}$,
 and let $h\colon F_k\to \mathrm{GL}(n,\mathbb{R})$ be the
 homomorphism defined by $h(\gamma_i)=M_i$.
 The property that for any $\gamma\in F_k$ $h(\gamma)$
@@ -1157,7 +1165,7 @@ Clearly $[ \Inn(\Gamma_i): Z_i]\le c_i$ and $Z_i\unlhd  \Inn(\Gamma_i)$ is norma
 
 
 Let
-$$N=H\cap\left(\bigcap_if_i^{-1}(Z_i)\right),\ \  N_i=N\cap G_i.$$
+$$N=H\cap\left(\bigcap_if_i^{-1}(Z_i)\right),\quad N_i=N\cap G_i.$$
 Then
 $$[G:N]\le C=C(c_1,\ldots, c_\ell, C_1,\ldots, C_\ell)$$
 and $N$ satisfies:
@@ -1261,8 +1269,9 @@ We repeat this procedure until, at some step, $k_\ell=m$.
 As a result one obtains
 a sequence $\{A_i\}$ of compact nonnegatively curved Alexandrov spaces
 with diameter $1$ that satisfies
-$$\dim A_i=k_i-k_{i-1}, \hbox{\ \ so that
-\ \ }\sum_{i=1}^\ell\dim A_i=m.$$
+$$\dim A_i=k_i-k_{i-1}, 
+\quad\text{so that}\quad
+\sum_{i=1}^\ell\dim A_i=m.$$
 We also obtain
 a sequence of rescaling factors $\vartheta_{n,i}=\diam M_{n,i}$,
 and  a nested sequence of submanifolds
@@ -1437,7 +1446,7 @@ Consider then the loop
 \tilde\gamma_j$.
 Clearly,
 $$[\gamma_j]=a^{-1}{\cdot} g^{-1}{\cdot} [\gamma_j']{\cdot} g{\cdot} a ,
-\ \ \text{or}\ \ [\gamma_j']=g{\cdot} a{\cdot} [\gamma_j]{\cdot} a^{-1}{\cdot} g^{-1}.$$
+\quad\text{or}\quad[\gamma_j']=g{\cdot} a{\cdot} [\gamma_j]{\cdot} a^{-1}{\cdot} g^{-1}.$$
 
 
 Now Proposition~\ref{prop:gradlip} implies that
@@ -1485,12 +1494,12 @@ we have that $\tilde\beta$ is a loop in $\tilde M_{n,i}$.
 
 Consider now the loop
 $\beta'=\Pi\circ\Phi^T\circ\tilde\beta$. Clearly,
-$$b=[\beta]=a^{-1}{\cdot} g^{-1}{\cdot} [\beta']{\cdot} g{\cdot} a , \ \ \text{or}\ \ [\beta']=g{\cdot} a{\cdot} b{\cdot} a^{-1}{\cdot} g^{-1}.$$
+$$b=[\beta]=a^{-1}{\cdot} g^{-1}{\cdot} [\beta']{\cdot} g{\cdot} a , \quad\text{or}\quad[\beta']=g{\cdot} a{\cdot} b{\cdot} a^{-1}{\cdot} g^{-1}.$$
 Proposition~\ref{prop:gradlip}  then implies that
 \begin{equation*}\label{e:1}\length(\beta')\le \exp(2{\cdot} T){\cdot}\length(\beta)
 \end{equation*}
 Therefore, if $h_a\colon G_i(n)/G_{i+1}(n)\to G_i(n)/G_{i+1}(n)$
-is induced by the conjugation $b\to a{\cdot} b{\cdot} a^{-1}$,
+is induced by the conjugation $b\to a{\cdot} b{\cdot} a ^{-1}$,
 then for any $a\in G(n)$ there is $g\in G_i(n)$ such that $|h_{g{\cdot} a}|\le \exp(2{\cdot} T)$.
 
 Let now $\delta_i$ be the minimal norm of the elements of $\pi_1^LA_i$,
@@ -1688,14 +1697,14 @@ if
 \item
 for any point $p\in R$ there is a neighborhood $U\ni p$
 which admits a distance chart $f\colon U\to \mathbb{R}^{m'}$,
-$$f(x)=(\dist_{a_1}(x),\dist_{a_2}(x),...,\dist_{a_{m'}}(x))$$
+$$f(x)=(\dist_{a_1}(x),\dist_{a_2}(x),\dots,\dist_{a_{m'}}(x))$$
 which is a smooth regular map,
 and
 
 \item
 smooth lifts of $f$ to $U_n\subset R_n$
 give, for $n$ large enough, regular maps
-$$f_n(x)=(\widetilde\dist_{a_{1,n}}(x),\widetilde\dist_{a_{2,n}}(x),...,
+$$f_n(x)=(\widetilde\dist_{a_{1,n}}(x),\widetilde\dist_{a_{2,n}}(x),\dots,
 \widetilde\dist_{a_{m',n}}(x))$$
 with $a_{i,n}\in M_n$, $a_{i,n}\to a_{n}$
 such that
@@ -1725,7 +1734,7 @@ $\omega_{j,n}(X)=\omega_{j,n}(Y)=0$, then $d\omega_{i,n}(X,Y)=0$.
 In particular,
 for each $i$ and all sufficiently large $n$,
 the distribution corresponding to the system of equations
-$$\omega_{j,n}(X)=0 \ \ \text{for all}\ \  j\le i$$
+$$\omega_{j,n}(X)=0 \quad\text{for all}\quad j\le i$$
 defines  on $\tilde M_n$ a foliation $\mathcal F_{i,n}$.
 
 \item
@@ -1839,7 +1848,7 @@ which acts trivially on $\pi_2M$.
 %\begin{floatingfigure}[br]{50mm}
 %\begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/ray(0.5)}
 %\lbl[br]{13.5,159;$p_n$\Large{.}}
-%\lbl[l]{25,160;$\times \lambda_n\approx\ \  ??$}
+%\lbl[l]{25,160;$\times \lambda_n\approx\quad ??$}
 %\lbl[l]{20,91;$M_n$}
 %\lbl[b]{12,21;$q_n$}
 %\lbl[b]{12,20;\Large{.}}
@@ -1875,7 +1884,7 @@ Here is the simplest related question which we cannot solve:
 Let $M_n=(\mathbb{S}^2\times\mathbb{R}^2,g_n)$ be a sequence of complete Riemannian manifolds with  $\sec(M_n)\ge -\eps_n$, where $\eps_n\to0$ as $n\to\infty$.
 Assume that for a sequence of points $p_n\in M_n$ we have that $(M_n,p_n)\GHto (\mathbb{R}_+,0)$.
 Let $q_n\in M_n$  be a sequence of points such that $|p_n q_n|=1$ and such that there is a sequence of rescalings $\lambda_n\to\infty$ such that
-$(\lambda_n{\cdot}M_n,q_n)\GHto \mathbb{S}^2\times \mathbb{S}^{1}\times \mathbb{R}$, where the latter space is equipped with the product of the canonical metrics.
+$(\lambda_n{\cdot} M_n,q_n)\GHto \mathbb{S}^2\times \mathbb{S}^{1}\times \mathbb{R}$, where the latter space is equipped with the product of the canonical metrics.
 \begin{enumerate}[(i)]
 
 \item Can it happen that $(\lambda_n{\cdot} M_n,p_n)\GHto(\mathbb{R}_+,0)$?
@@ -2103,13 +2112,13 @@ Note that by Yamaguchi's theorem, the statement can be reformulated using purely
 
 
 \begin{thm}
-Let $F_1,F_2,...,F_n$ be an array of compct manifolds 
+Let $F_1,F_2,\dots,F_n$ be an array of compact manifolds 
 such that each $F_i$ is either $\mathbb{S}^{1}$ or is simply connected. 
-Assume $E$ is the total space of a tower of fiber bundles over point
-$$E=E_n\buildrel {F_n}\over \longrightarrow E_{n-1}\buildrel {F_{n-1}}\over\longrightarrow...\buildrel {F_1}\over\longrightarrow E_0=\{pt\}$$
+Assume $E$ is the total space of a tower of fiber bundles over a point
+$$E=E_n\buildrel {F_n}\over \longrightarrow E_{n-1}\buildrel {F_{n-1}}\over\longrightarrow\dots\buildrel {F_1}\over\longrightarrow E_0=\{pt\}$$
 and each of the bundles $E_k\buildrel {F_k}\over \longrightarrow E_{k-1}$ is homotopically trivial over the $1$-skeleton. 
 Then the fundamental group $\pi_1E$ contains a nilpotent subgroup $N$ such that
-$$[\pi_1E:N]\le \mathrm{Const}(F_1,F_2,\dots,F_n)\ \ \text{and}\ \ \mathrm{Tor}(N)\subset \mathrm{Z}(N),$$
+$$[\pi_1E:N]\le \mathrm{Const}(F_1,F_2,\dots,F_n)\quad\text{and}\quad\mathrm{Tor}(N)\subset \mathrm{Z}(N),$$
 where $\mathrm{Tor}(N)$ and $\mathrm{Z}(N)$ denote the torsion and the center of $N$ correspondingly.
 \end{thm}
 
@@ -2117,28 +2126,32 @@ In the proof we use the following result proved by Dror,  Dwyer and Kan in \cite
 
 \begin{thm}\label{thm:DDK}
 Let $F$ be a finite simply connected CW-complex and 
-$E_0(F)$ be the connected component of identity of the 
-space of all homotopy equivalences $F\to F$. Then $E_0(F)$ is homotopy equivalent to a CW-complex with finite number of cells in each dimension.
+$Aut_0(F)$ be the identity component  of the 
+space of all homotopy equivalences $F\to F$. Then $Aut_0(F)$ is homotopy equivalent to a CW-complex with finite number of cells in each dimension.
 \end{thm}
 
-Further we consider $\mathbb{S}^1$ as the unit circle in the complex plane, so  $z\mapsto z^n$ defines a map $\mathbb{S}^1\to \mathbb{S}^1$ of degree $n$.
+Let $\star=\id_F$ be the base point of $\Aut_0(F)$.
+
+Further, we consider $\mathbb{S}^1$ as the unit circle in the complex plane, so  $z\mapsto z^n$ defines a map $\mathbb{S}^1\to \mathbb{S}^1$ of degree $n$.
 
 \begin{cor}\label{cor:DDK}
-Given a finite simply connected CW-complex $F$, there is natural number $n=n(F)$ such that the following  holds.
+
+Given a finite simply connected CW-complex $F$, there is a natural number $n=n(F)$ such that the following  holds.
 
 Assume
-$\kappa_z\colon F\to F$ is a one parameter of homotopy equivalences, $z\in\mathbb{S}^1$,
+$\{\kappa_z\colon F\to F: z\in \mathbb{S}^1\}$ is a one parameter of homotopy equivalences with $\kappa_1=\id_F$
 such that for some $N\in\mathbb{N}$ the family $\kappa^N_z=\kappa_{z^N}$ is homotopic to the constant family $\mathrm{id}_F$. 
 Then $\kappa^n_z$ is homotopic to the constant family $\mathrm{id}_F$.
+
 \end{cor}
 
 \begin{proof}[Proof.]
-The connected component $E_0(F)$ of the identity of the 
-space of all homotopy equivalences $F\to F$ forms an $H$-space. 
-Therefore $\pi_1(E_0(F))$ is commutative. 
+We can view $\kappa$ as a loop in $\Aut_0(F)$ based at $\star$.
+Since $\Aut_0(F)$ is an $H$-space it's fundamental group  
+$\pi_1(E_0(F))$ is abelian. 
 
-By Theorem~\ref{thm:DDK}, $\pi_1(E_0(F))$ is finitely generated,
-therefore the torsion of $\pi_1(E_0(F))$ is finite.
+By Theorem~\ref{thm:DDK}, $\pi_1(\Aut_0(F))$ is finitely generated,
+therefore the torsion of $\pi_1(\Aut_0(F))$ is finite.
 Hence the corollary follows.
 \end{proof}
 
@@ -2149,11 +2162,13 @@ Let $F$ be a compact simply connected manifold and $h\colon \DD\times F\z\to F$ 
 $\DD$-family of homotopy equivalences $F\to F$ such that $h(u,*)=\mathrm{id}_F$ for any
 $u\in\partial \DD$. 
 Consider the map $\beta_x\colon \DD\to F$ defined by $\beta_x\colon u\mapsto h(u,x)$ for a fixed point $x\in F$. 
-Then $[\beta_x]\in \mathrm{Tor}(\pi_2F)$.
+Then $[\beta_x]\in \mathrm{Tor}(\pi_2F)$ and is independent of $x$.
 
-Moreover, given a map $f\colon \DD\to F$ such that $f(u)=x$ for any $u\in\partial \DD$, we have 
-$[f_h]-[f]=[\beta_x]\in \mathrm{Tor}(\pi_2F)$, 
-where $f_h(u)=h(u,f(u))$. 
+Moreover, given a map $f\colon \DD\to F$ let $f_h\co \DD\to F$ be given by $f_h(u)=h(u,f(u))$.
+Note that  $f_h|_{\partial \DD}=f|_{\partial \DD}$. In particular we can view $[f_h]-[f]$ as an element of $\pi_2F$.
+
+Then 
+$[f_h]-[f]=[\beta_x]\in \mathrm{Tor}(\pi_2F)$. 
 \end{techlem}
 
 \begin{proof}[Proof.] Assume the contrary. 
@@ -2161,15 +2176,15 @@ where $f_h(u)=h(u,f(u))$.
 The map $h$ induces a map $\mathbb{S}^2\times F\to F$ which with a  slight abuse of notation we'll still denote by $h$. 
 Consider the induced map on cohomology
 $H^{*+2}(F)\overset{h^*}{\longrightarrow} H^{*+2}(\mathbb{S}^2\times F)\to H^*(F)\otimes H^2(\mathbb{S}^2)\cong  H^*(F)$ where the second map is the projection coming from the K\"unneth isomorphism.
-We'll denote the resulting map $H^{*+2}(F)\to H^*(F)$ by $D_h$. It's easy to see that it's an algebra derivation on $H^*(F)$. The same obviously holds true for $D_h^\mathbb{Q}\colon H^{*+2}(F,\mathbb{Q})\to H^*(F,\mathbb{Q})$
+We'll denote the resulting map $H^{*+2}(F)\to H^*(F)$ by $D_h$. It's easy to see that it's an algebra derivation on $H^*(F)$. The same obviously holds true for $D_h^\QQ\colon H^{*+2}(F,\QQ)\to H^*(F,\QQ)$
 
 %Then it the correspondent derivation 
 %$$D_h\colon H^{k+2}(F)\to H^{k}(F)$$
  %has nontrivial element in the second cohomology; that is,
- We claim that  $D_h^\mathbb{Q}$ vanishes on $H^2(F,\mathbb{Q})$. Suppose not and 
+ We claim that  $D_h^\QQ$ vanishes on $H^2(F,\QQ)$. Suppose not and 
   for some 
-$\theta\in H^2(F,\mathbb{Q})$ we have $H^0(F,\mathbb{Q})\ni D_h^\mathbb{Q}\theta\not=0$. 
-Note that \[D_h^\mathbb{Q}\theta^k=k{\cdot} \theta^{k-1}{\cdot} D_h^\mathbb{Q}\theta.\] 
+$\theta\in H^2(F,\QQ)$ we have $H^0(F,\QQ)\ni D_h^\QQ\theta\not=0$. 
+Note that \[D_h^\QQ\theta^k=k{\cdot} \theta^{k-1}{\cdot} D_h^\QQ\theta.\] 
 
 
 
@@ -2181,10 +2196,12 @@ Therefore
 \quad[\theta^{k}]\ne0.\]
 Therefore $[\theta^{k}]\not=0$ for any positive integer $k$.
 In particular, $F$ has infinite dimension, a contradiction. 
-Thus, $D^\mathbb{Q}_h|_{H^2(F,\mathbb{Q})}\equiv 0$. Hence, $D_h|_{H^2(F)}\equiv 0$ and therefore $h^*=pr_2^*$ on $H^2(F)$ where $pr_2\colon \mathbb{S}^2\times F\to F$ is the second coordinate projection. 
+Thus, $D^\QQ_h|_{H^2(F,\QQ)}\equiv 0$. Hence, $D_h|_{H^2(F)}\equiv 0$ and therefore $h^*=pr_2^*$ on $H^2(F)$ where $pr_2\colon \mathbb{S}^2\times F\to F$ is the second coordinate projection. 
 This  easily implies the statement of the Lemma.
 \end{proof}
-
+\begin{rmk}
+Since $[\beta_x] \in \pi_2F$ is independent of the choice of $x$ we can drop the subindex $x$ and simply denote this element by $[\beta]$.
+\end{rmk} 
 
 \subsection{}
 
@@ -2202,8 +2219,8 @@ $\bar\alpha\in \pi_2(B,\bar p)$ their projection to $B$.
 
 By assumptions, $\bar\alpha^{\bar\gamma}=\bar\alpha$, or equivalently, there is a  map
 $h\colon \mathbb{S}^2\times \mathbb{S}^1\to B$ such that 
-$$h(u,v)=\bar p,\ \ 
-h(u,*)\sim\bar\gamma\ \ \text{ and}\ \ 
+$$h(u,v)=\bar p,\quad
+h(u,*)\sim\bar\gamma\quad\text{ and}\quad
 h(*,v)\sim\bar\alpha.$$
 
 The induced bundle $\mathbb{S}^1\to E'\to \mathbb{S}^2\times \mathbb{S}^1$ is trivial. 
@@ -2214,7 +2231,7 @@ for any element in $\gamma\in \pi_1E'$.
 \begin{claim}
 Let $F\xrightarrow{i} E\to B$ be a fiber bundle with 
 simply connected fiber $F$ over a compat manifold $B$, 
-which admits a trivialization on $1$-skeleton of $B$. 
+which admits a trivialization on the $1$-skeleton of $B$. 
 Assume $\pi_1B$ is almost nilpotent 
 and the action of $\pi_1B$ on $\pi_2B$ is almost trivial. 
 Then  the action of $\pi_1E$ on $\pi_2E$ is almost trivial.
@@ -2229,8 +2246,8 @@ $\bar\alpha\in \pi_2(B,\bar p)$ their projections to $B$.
 
 By assumptions, there is a map
 $h\colon \mathbb{S}^2\times \mathbb{S}^1\to B$ such that 
-$$h(u,v)=\bar p,\ \ 
-h(u,*)\sim\bar\gamma\ \ \text{ and}\ \ 
+$$h(u,v)=\bar p,\quad
+h(u,*)\sim\bar\gamma\quad\text{ and}\quad
 h(*,v)\sim\bar\alpha.$$
 The induced bundle $F\to E'\to \mathbb{S}^2\times \mathbb{S}^1$ admits a 
 trivialization over $u\times \mathbb{S}^1$.
@@ -2241,14 +2258,15 @@ and due the bundle being trivial  over $u\times \mathbb{S}^1$,
 it  can be chosen to be the identity on $F_v$.
 
 Consider a map $m\colon \DD\to \mathbb{S}^2$ such that 
-(1) $m$ is injective in the interior of $\DD$, 
-(2) $m(\partial \DD)=v$.
+\begin{enumerate}[(1)]
+\item  $m$ is injective in the interior of $\DD$, 
+\item  $m(\partial \DD)=v$.
+\end{enumerate}
 Fix a trivialization 
 $F\times \DD$ of the induced bundle. 
 Let 
 $m'\colon F\times \DD\to E''$ be correspondent mapping. 
-Clearly 
-$m'(*,x)$ is a homeomorphism  between $F\times x$ and the fiber $F_{m(x)}$.
+By construction $m'(*,x)$ is a homeomorphism  between $F\times x$ and the fiber $F_{m(x)}$.
 Then the map $f\colon E''\to E''$ is completely described by the map 
 $$f'\colon F\times \DD\to F\times \DD $$ 
 uniquely determined  by the  identity
@@ -2256,7 +2274,7 @@ $m'\circ f'=f\circ m'$.
 Clearly $f'(*,x)=\mathrm{id}_{F\times x}$ 
 for any $x\in\partial \DD$.
 
-By Technical Lemma, there is an element 
+By the Technical Lemma, there is an element 
 $[\beta]\in \mathrm{Tor}(\pi_2F)$ such that 
 \[[i(\beta)]=\alpha^\gamma-\alpha.\]
 Since the bundle is trivial over $\mathbb{S}^1$,
@@ -2278,8 +2296,8 @@ A compact connected manifold $M$ is called \emph{reliable} if
 \begin{enumerate}
 \item \label{reliable1} For any 
 $\tau\in \mathrm{Tor}(\pi_1(M,p))$ and for any other element $\gamma\in \pi_1(M,p)$ there is a map of $h\colon \mathbb{S}^1\times \mathbb{S}^1\to M$  such that 
-$$h(u,v)= p,\ \ 
-h(u,*)\sim\gamma\ \ \text{ and}\ \ 
+$$h(u,v)= p,\quad
+h(u,*)\sim\gamma\quad\text{ and}\quad
 h(*,v)\sim\tau.$$
 \item \label{reliable2} There is a finite cover $\iota\colon \tilde T^2\z\to \mathbb{S}^1\times \mathbb{S}^1$ and a map of solid torus $f\colon \DD\times \mathbb{S}^1\z\to M$ and an isomorphism $i\colon \tilde T^2\to \partial \DD\times \mathbb{S}^1$ such that $f\circ i=h\circ\iota$.
 \end{enumerate}
@@ -2288,7 +2306,7 @@ h(*,v)\sim\tau.$$
 
 It's obvious that if $M$ is \emph{reliable} then  $\mathrm{Tor}(\pi_1M)\subset \mathrm{Z}(\pi_1M)$.
 \begin{claim}
- Let $\mathbb{S}^1\to E\to B$ be an oriented $\mathbb{S}^1$-bundle, the base  $B$ is reliable and the action of $\pi_1B$ on $\pi_2B$ is almost trivial. 
+ Let $\mathbb{S}^1\to E\to B$ be an oriented $\mathbb{S}^1$-bundle such that the base  $B$ is reliable and the action of $\pi_1B$ on $\pi_2B$ is almost trivial. 
 Then $E$ is reliable.
 \end{claim}
 
@@ -2297,23 +2315,23 @@ Let $\gamma\in \pi_1(E,p)$ and $\tau\in \mathrm{Tor}(\pi_1(E,p))$.
 Let us denote by $\bar\gamma\in \pi_1(B,\bar p)$ and 
 $\bar\tau\in \pi_1(B,\bar p)$ their projections to $B$.
 
-From the assumptons we have 
+From the assumptions we have 
 that there is a map 
 $\bar h\colon \mathbb{S}^1\times \mathbb{S}^1\to B$ such that 
-$$\bar h(u,v)=\bar p,\ \ 
-\bar h(u,*)\sim\bar\gamma\ \ \text{ and}\ \ 
+$$\bar h(u,v)=\bar p,\quad
+\bar h(u,*)\sim\bar\gamma\quad\text{ and}\quad
 \bar h(*,v)\sim\bar\tau,$$
 which satisfy the definition of a reliable manifold.
 
 Note that since $B$ is reliable we have $[h]=0\in H_2(B,\mathbb{Q})$. Therefore the induced bundle $\mathbb{S}^1\to E'\to \mathbb{S}^1\times \mathbb{S}^1$ is trivial, in particular $E'=T^3$. This  implies that $\gamma$ and $\tau$ commute. Hence \eqref{reliable1} is satisfied and we only need to check \eqref{reliable2}.
 
 Since the bundle  $\mathbb{S}^1\to E'\to \mathbb{S}^1\times \mathbb{S}^1$ is trivial there is a lifting $h\colon \mathbb{S}^1\times \mathbb{S}^1\to E$ of the map $\bar h$ such that
-$$ h(u,v)= p,\ \ 
- h(u,*)\sim\gamma\ \ \text{ and}\ \ 
+$$ h(u,v)= p,\quad
+ h(u,*)\sim\gamma\quad\text{ and}\quad
  h(*,v)\sim\tau,$$
 Consider the covering map $h\circ\iota\colon \tilde T^2\to E$.
 
-By the definition of a reliable manifold there is a covering $\iota\colon \tilde T^2\z\to \mathbb{S}^1\times \mathbb{S}^1$ and a map of solid torus $\bar f\colon \DD\times \mathbb{S}^1\z\to B$ and an isomorphism $i\colon \tilde T^2\to \partial \DD\times \mathbb{S}^1$ such that $\bar f\circ i=\bar h\circ\iota$. The pullback bundle $\mathbb{S}^1\to \tilde E'\to \DD\times \mathbb{S}^1$ is trivial. Let $s\colon  \DD\times \mathbb{S}^1\to  \tilde E'$ be a section.
+By the definition of a reliable manifold there is a covering $\iota\colon \tilde T^2\z\to \mathbb{S}^1\times \mathbb{S}^1$ and a map of solid torus $\bar f\colon \DD\times \mathbb{S}^1\z\to B$ and an isomorphism $i\colon \tilde T^2\to \partial \DD\times \mathbb{S}^1$ such that $\bar f\circ i=\bar h\circ\iota$. The pullback bundle $\mathbb{S}^1\to \tilde E'\to \DD\times \mathbb{S}^1$ is trivial. Let $s\co  \DD\times \mathbb{S}^1\to  \tilde E'$ be a section.
 
 By above 
 we have that $h\circ\iota$ is homotopic to a map
@@ -2341,7 +2359,7 @@ The projection of this disc to $B$ gives an element $\alpha\in \pi_2B$
 and since $\pi_1B$ acting on $\pi_2B$ almost trivially we get 
 that passing to finite cover of $\tilde T^2$ again (along $\psi$) we have a map of $\bar g\colon \mathbb{S}^2\times \mathbb{S}^1\to B$ with
 $$ 
- \bar g(u,*)\sim\psi^l\ \ \text{ and}\ \ 
+ \bar g(u,*)\sim\psi^l\quad\text{ and}\quad
  \bar g(*,v)\sim\alpha.$$
 We can lift this map to a map $g\colon \DD\times \mathbb{S}^1\to E$ in such a way that $g\circ i=h'\circ \iota$. 
 Together with the homotopy above, the latter gives the needed map of 
@@ -2353,11 +2371,13 @@ There is a positive integer $n=n(F,\dim B)$ such that the following holds.
 
 Assume $F\to E\to B$ 
 is a fiber bundle such that
-(1) the fiber $F$ simply connected, 
-(2) the base $B$ is reliable,
-(3) the fundamental group of $B$ is nilpotent and
-(4) the bundle admits a trivialization on a $1$-skeleton of $B$.
-Then there is a cover $\tilde E$ of the  total space $E$ with at most $n$ folds which is reliable.
+\begin{enumerate}[(1)]
+\item the fiber $F$ is simply connected;
+\item the base $B$ is reliable;
+\item the fundamental group of $B$ is nilpotent and is generated by $\le c(\dim B)$ elements;
+\item the bundle admits a trivialization over the $1$-skeleton of $B$.
+\end{enumerate}
+Then there is an at most $n$-fold cover $\tilde E$ of the  total space $E$ which is reliable.
 %There is an $n=n(F,\dim B)$ such that if $F\to E\to B$  is a fiber bundle with simply connected fiber $F$, reliable base $B$ with nilpotent fundamental group on at most $c(\dim B)$ generators, which admits a trivialization over the $1$-skeleton of $B$ then there is a cover $\tilde E$ of the  total space $E$  which is at most $n$-fold and reliable.
 \end{claim}
 
@@ -2369,10 +2389,10 @@ to construct
 an at most $n=n(F,\dim B)$-fold cover $\widetilde B\to B$ 
 such that for any two elements $\bar\gamma\in \pi_1(\tilde B,\bar p)$ and $\bar\tau\in \Tor \pi_1(\tilde B,\bar p)$ there is a map 
 $\bar h\colon \mathbb{S}^1\times \mathbb{S}^1\to \tilde B$ such that 
-$$\bar h(u,v)=\bar p,\ \ 
-\bar h(u,*)\sim\bar\gamma\ \ \text{ and}\ \ 
+$$\bar h(u,v)=\bar p,\quad
+\bar h(u,*)\sim\bar\gamma\quad\text{ and}\quad
 \bar h(*,v)\sim\bar\tau,$$
-which satisfy the condition in the  definition of reliable manifold and such that the induced bundle $\bar h^*$ over $\mathbb{S}^1\times \mathbb{S}^1$ and fiber $F$ is homotopically trivial.
+which satisfy the condition in the  definition of reliable manifold and such that the induced bundle $\bar h^*$ over $\mathbb{S}^1\times \mathbb{S}^1$ with  fiber $F$ is homotopically trivial.
 
 Let $\gamma\in \pi_1(E,p)$ and $\tau\in \mathrm{Tor}(\pi_1(E,p))$. 
 Let us denote by $\bar\gamma\in \pi_1(B,\bar p)$ and 
@@ -2381,15 +2401,15 @@ $\bar\tau\in \pi_1(B,\bar p)$ their projections to $B$.
 From the assumptions we have 
 that there is a map 
 $\bar h\colon \mathbb{S}^1\times \mathbb{S}^1\to B$ such that 
-$$\bar h(u,v)=\bar p,\ \ 
-\bar h(u,*)\sim\bar\gamma\ \ \text{ and}\ \ 
+$$\bar h(u,v)=\bar p,\quad
+\bar h(u,*)\sim\bar\gamma\quad\text{ and}\quad
 \bar h(*,v)\sim\bar\tau,$$
 which satisfy condition \eqref{reliable1} in the definition of a reliable manifold.
 
 The  induced bundle $f^*$ over $\DD\times \mathbb{S}^1$ 
 is trivial since the bundle over $\mathbb{S}^1$ is. 
 Consider the  induced bundle $\bar h^*$ over $\mathbb{S}^1\times \mathbb{S}^1$. 
-After finite cover $\iota\colon \tilde T^2\to \mathbb{S}^1\times \mathbb{S}^1$ the induced bundle 
+Pulling back by the finite cover $\iota\colon \tilde T^2\to \mathbb{S}^1\times \mathbb{S}^1$ the induced bundle 
 $(\bar h \circ \iota)^*$ over $\tilde T^2$ becomes trivial, since it is also can be induced vial pull back by $i\colon \tilde T^2\to \DD\times \mathbb{S}^1$ and the bundle over $ \DD\times \mathbb{S}^1$ is trivial. 
 The bundle over $\mathbb{S}^1\times \mathbb{S}^1$ admits a trivialization on 1-skeleton 
 for the standard  product CW-structure. 
@@ -2407,10 +2427,10 @@ By Corollary \ref{cor:DDK},  $\kappa^{n(F)}$
 is homotopic to the constant map $(z,x)\mapsto x$.
 
 Since $\pi_1 B$ is nilpotent and generated by $\le c(\dim B)$ elements,
-it follows that there is  at most $n'=n'(F,\dim B)$ fold  cover $\widetilde B$ of $B$ such that for any two elements $\bar\gamma\in \pi_1(\tilde B,\bar p)$ and $\bar\tau\in \pi_1(\tilde B,\bar p)$ there is a map 
+it follows that there is  an at most $n'=n'(F,\dim B)$-fold  cover $\widetilde B$ of $B$ such that for any two elements $\bar\gamma\in \pi_1(\tilde B,\bar p)$ and $\bar\tau\in \pi_1(\tilde B,\bar p)$ there is a map 
 $\bar h\colon \mathbb{S}^1\times \mathbb{S}^1\to B$ such that 
-$$\bar h(u,v)=\bar p,\ \ 
-\bar h(u,*)\sim\bar\gamma\ \ \text{ and}\ \ 
+$$\bar h(u,v)=\bar p,\quad
+\bar h(u,*)\sim\bar\gamma\quad\text{ and}\quad
 \bar h(*,v)\sim\bar\tau,$$
 and such that the induced bundle $\bar h^*$ over $\mathbb{S}^1\times \mathbb{S}^1$ and fiber $F$ is homotopy trivial.
 
@@ -2430,35 +2450,54 @@ that is, $ E$ is reliable.
 Let us summarize what we have:
 
 \begin{enumerate}
-\item The  induced bundle $E'$ over $\DD\times \mathbb{S}^1$ is trivial since the bundle over $\mathbb{S}^1$ is. 
-\item There is yet another homotopic trivialization over $\partial \DD\times \mathbb{S}^1=\widetilde T^2$ which is induced from a homotopic trivialization on $T^2=\mathbb{S}^1\times \mathbb{S}^1$.
+\item \label{triv1} The  induced bundle $f^*$ over $\DD\times \mathbb{S}^1$ is trivial since the bundle over $\mathbb{S}^1$ is. 
+\item \label{triv2} There is yet another  trivialization over $\partial \DD\times \mathbb{S}^1=\widetilde T^2$ which is induced from a  trivialization on $T^2=\mathbb{S}^1\times \mathbb{S}^1$.
 \end{enumerate}
 
 
+We can assume  that the bundle over $\DD\times \mathbb{S}^1$ is smooth and both of the above trivializations are smooth. 
+Consider the vector field $\bar V=\frac {\partial }{\partial t}$ on $\DD\times \mathbb{S}^1$;
+here $t$ is the $\mathbb{S}^1$-coordinate and we assume $\mathbb{S}^1=\mathbb{R}/\mathbb{Z}$.
 
-Let us lift the homotopy $\DD\times \mathbb{S}^1\to B$ to a homotopy 
-$m\colon \DD\times F\times \mathbb{R}\to E$ 
-(here $\mathbb{S}^1=\mathbb{R}/\mathbb{Z}$) on such a way that on its boundary $\partial \DD\times F$ it goes along the second trivialization over $\partial \DD\times \mathbb{S}^1=\widetilde T^2$.
-For all $u\in \DD$ and  $x\in F$, define $\hat h\colon\DD\times F\to F$ as the (nececary unique) map such that 
-\[m(u,x,0)=m(u,\hat h(x),1).\] 
-Note that $\hat h(u,x)=x$ for any $u\in\partial \DD$ and $x\in F$;
-it means that we can apply Technical Lemma (\ref{techlem}) for $\hat h$.
+Let $p\co E'\to \DD\times \mathbb{S}^1$ be the pullback bundle over  $\DD\times \mathbb{S}^1$. 
 
-Fix $x\in F$, $w\in \mathbb{S}^1$.
-Since $F$ is simply connected, we can choose a conitnuous map $f\:\colon \DD\to F$ such that $f(u)=x$ for any $u\in \partial \DD$.
-Recall that $f_{\hat h}(u)= \hat h(u,f(u))$
-and by Technical Lemma (\ref{techlem})
+Let $ V$ be the horizontal lift of $\bar V$ over $\tilde T^2$ with respect to  trivialization \eqref{triv2} above. Using partition of unity we can easily extend it to a vector field (which we'll still denote by $V$) on $E'$  which projects to $\bar V$. Let $F\co E'\to E'$ be the time 1 integral flow of $V$. Note that by construction 
+\begin{equation}\label{monodr-bry}
+F(q)=q \text{ for any } q \in p^{-1}(\partial \DD\times\mathbb{S}^1).
+\end{equation}
+
+Since $E'$ is a trivial bundle we can identify its total space with $\DD\times F\times \mathbb{S}^1$ via, say, trivialization~\eqref{triv1} above. 
+Consider the map  $m\co \DD\times F\times \mathbb{R}\to E$ given by the formula 
+\[(u,x,t)\mapsto \phi_t(u,x,[0]),\]
+where $\phi_t$ is the integral flow of $V$ where $u\in \DD$, $x\in F$ and $[0]\in \mathbb{S}^1=\mathbb{R}/\mathbb{Z}$.
+
+By \eqref{monodr-bry} it follows that  $m(u,x,n)=m(u,x,0)$ for any $n\in\mathbb{Z}$, $u\in \partial \DD$ and $x\in F$.
+
+Note that there is a map $\hat h\co \DD\times F\to F$ 
+for which the following identity holds
+\[m(u,\hat{h}(u,x),0)= m(u,x,1).\] 
+Moreover $\hat h(u,x)=x$ for any $u\in\partial \DD$ and $x\in F$.
+This means that we can apply Technical Lemma (\ref{techlem}) to $\hat h$.
+
+Consider a horizontal section of $E'$ over $\partial \DD\times \mathbb{S}^1$ with respect to ~\eqref{triv2}. 
+Fix $w\in \mathbb{S}^1$. 
+This gives a horizontal with respect to ~\eqref{triv2} section over $\partial \DD\times w$.
+Since 
+ $F$ is simply connected this section can be extended to a section over $\DD\times w$ which in trivialization~\eqref{triv1} has the form $u\mapsto (u, w, f(u))$ for some map $f\co \DD\to F$.
+As in Technical Lemma (\ref{techlem}) set  $f_{\hat h}(u)= \hat h(u,f(u))$.
+
+Then by Technical Lemma (\ref{techlem})
 \begin{equation}
 \label{eq:in-Tor}
-[f_{\hat h}]-[f]=[\beta_x]\in \mathrm{Tor}(\pi_2F)
+[f_{\hat h}]-[f]=[\beta]\in \mathrm{Tor}(\pi_2F)
 \end{equation}
 
 
-Consider the sequence of maps $f^n\colon \DD\to F$ defined recurcevly, $f^0=f$ and $f^{n+1}=f^n_{\hat h}$.
+Consider the sequence of maps $f^n\colon \DD\to F$ defined recursively, $f^0=f$ and $f^{n+1}=f^n_{\hat h}$.
 By (\ref{eq:in-Tor}),
 \begin{equation}
 \label{eq:in-Tor-n}
-[f^n]-[f^0]=n{\cdot}\beta_x=0
+[f^n]-[f^0]=n{\cdot}[\beta]=0
 \end{equation}
 for some positive integer $n$.
 
@@ -2468,7 +2507,7 @@ In particular, by (\ref{eq:in-Tor-n}),
 the two maps $\DD\to E$ given by $u\mapsto m(u,f(u),0)$ and $u\mapsto m(u,f(u),n)$ are homotopic rel. to $\partial \DD$;
 denote by $s_t$, $t\in[0,1]$ the homotopy.
 It follows that after $n$-fold cover of $\widetilde T^2$ it has a section which can be contracted by a solid torus;
-the map of solid torus is a concatination of $(u,t)\mapsto m(u,f(u),t)$ for $t\in[0,n]$ 
+the map of solid torus is a concatenation of $(u,t)\mapsto m(u,f(u),t)$ for $t\in[0,n]$ 
 and $(u,t)\to s_t(u)$ for $t\in[0,1]$. 
 \end{proof}
 
