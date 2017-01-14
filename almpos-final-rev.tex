@@ -2152,11 +2152,13 @@ Let $F$ be a compact simply connected manifold and $h\colon \DD\times F\z\to F$ 
 $\DD$-family of homotopy equivalences $F\to F$ such that $h(u,*)=\mathrm{id}_F$ for any
 $u\in\partial \DD$. 
 Consider the map $\beta_x\colon \DD\to F$ defined by $\beta_x\colon u\mapsto h(u,x)$ for a fixed point $x\in F$. 
-Then $[\beta_x]\in \mathrm{Tor}(\pi_2F)$.
+Then $[\beta_x]\in \mathrm{Tor}(\pi_2F)$ and is independent of $x$.
 
-Moreover, given a map $f\colon \DD\to F$ such that $f(u)=x$ for any $u\in\partial \DD$, we have 
-$[f_h]-[f]=[\beta_x]\in \mathrm{Tor}(\pi_2F)$, 
-where $f_h(u)=h(u,f(u))$. 
+Moreover, given a map $f\colon \DD\to F$ let $f_h\co \DD\to F$ be given by $f_h(u)=h(u,f(u))$.
+Note that  $f_h|_{\partial \DD}=f|_{\partial \DD}$. In particular we can view $[f_h]-[f]$ as an element of $\pi_2F$.
+
+Then 
+$[f_h]-[f]=[\beta_x]\in \mathrm{Tor}(\pi_2F)$. 
 \end{techlem}
 
 \begin{proof}[Proof.] Assume the contrary. 
@@ -2187,7 +2189,9 @@ In particular, $F$ has infinite dimension, a contradiction.
 Thus, $D^\QQ_h|_{H^2(F,\QQ)}\equiv 0$. Hence, $D_h|_{H^2(F)}\equiv 0$ and therefore $h^*=pr_2^*$ on $H^2(F)$ where $pr_2\colon \mathbb{S}^2\times F\to F$ is the second coordinate projection. 
 This  easily implies the statement of the Lemma.
 \end{proof}
-
+\begin{rmk}
+Since $[\beta_x] \in \pi_2F$ is independent of the choice of $x$ we can drop the subindex $x$ and simply denote this element by $[\beta]$.
+\end{rmk} 
 
 \subsection{}
 
@@ -2463,28 +2467,23 @@ Define $\hat h\co \DD\times F\to \DD$ by the formula $\hat{h}(u,x)=pr_F\circ m(u
 Note that by above, $\hat h(u,x)=x$ for any $u\in\partial \DD$ and $x\in F$.
 This means that we can apply Technical Lemma (\ref{techlem}) to $\hat h$.
 
-Consider a horizontal section of $E'$ over $\partial \DD\times \S^1$ with respect to ~\eqref{triv2}. Fix $w\in \mathbb{S}^1$. This gives a horizontal section over $\partial \DD\times w$.
+Consider a horizontal section of $E'$ over $\partial \DD\times \S^1$ with respect to ~\eqref{triv2}. Fix $w\in \mathbb{S}^1$. This gives a horizontal with respect to ~\eqref{triv2} section over $\partial \DD\times w$.
+Since 
+ $F$ is simply connected this section can be extended to a section over $\DD\times w$ which in trivialization  ~\eqref{triv1} has the form $u\mapsto (u, w, f(u))$ for some map $f\co \DD\to F$.
+As in Technical Lemma (\ref{techlem}) set  $f_{\hat h}(u)= \hat h(u,f(u))$.
 
-Since $F$ is simply connected this section can be extended to a section over $\DD\times w$.
-
-
-
-
-Fix $x\in F$, $w\in {\Bbb S}^1$.
-Since $F$ is simply connected, we can choose a conitnuous map $f\:\colon \DD\to F$ such that $f(u)=x$ for any $u\in \partial \DD$.{\color{red} What???}
-Recall that $f_{\hat h}(u)= \hat h(u,f(u))$
-and by Technical Lemma (\ref{techlem})
+Then by Technical Lemma (\ref{techlem})
 \begin{equation}
 \label{eq:in-Tor}
-[f_{\hat h}]-[f]=[\beta_x]\in \mathrm{Tor}(\pi_2F)
+[f_{\hat h}]-[f]=[\beta]\in \mathrm{Tor}(\pi_2F)
 \end{equation}
 
 
-Consider the sequence of maps $f^n\colon \DD\to F$ defined recurcevly, $f^0=f$ and $f^{n+1}=f^n_{\hat h}$.
+Consider the sequence of maps $f^n\colon \DD\to F$ defined recursively, $f^0=f$ and $f^{n+1}=f^n_{\hat h}$.
 By (\ref{eq:in-Tor}),
 \begin{equation}
 \label{eq:in-Tor-n}
-[f^n]-[f^0]=n\cdot\beta_x=0
+[f^n]-[f^0]=n\cdot[\beta]=0
 \end{equation}
 for some positive integer $n$.
 
