@@ -1,0 +1,120 @@
+\documentclass{amsart}
+\usepackage{almpos}
+
+\usepackage[colorlinks=true,
+citecolor=black,
+linkcolor=black,
+anchorcolor=black,
+filecolor=black,
+menucolor=black,
+urlcolor=black,
+pdftitle={On torsion in center conjecture},
+pdfsubject={Differential geometry},
+pdfauthor={Vitali Kapovitch, Anton Petrunin and Wilderich Tuschmann}
+]{hyperref}
+
+\begin{document}
+\title[On torsion in center conjecture]
+{On torsion in center conjecture:\\
+{\small An appendix for ``Nilpotency, almost nonnegative curvature, and gradient flow''}}
+
+\thanks{\it 2000 AMS Mathematics Subject Classification:\rm\
+53C20. Keywords: nonnegative curvature, nilpotent}\rm
+\author{Vitali Kapovitch}
+\address{Vitali Kapovitch\\Department of Mathematics\\University of Toronto\\
+Toronto, Ontario, M5S 2E4, Canada}\email{vtk@math.toronto.edu}
+\author{Anton Petrunin }\address{Anton Petrunin\\ Department of Mathematics\\ Pennsylvania State University\\
+University Park, State College, PA 16802
+}\email{petrunin@math.psu.edu}
+\author{Wilderich Tuschmann}\address{Wilderich Tuschmann
+\\Mathematisches Seminar
+\\Christian-Albrechts--Universit\"at zu Kiel\\ Ludewig-Meyn--Stra\ss{}e 4-8 \\ D-24118 Kiel,
+Germany}\email{tusch@math.uni-kiel.de}
+
+\maketitle
+\begin{abstract}
+We report on our attempt to prove that
+any almost nonnegatively curved $m$-dimesional manifold $M$ 
+admits a finite cover $\tilde M$ with number of folds bounded in terms of $m$
+such that the torsion of the fundamental group $\pi_1 \tilde M$ lies in its center.
+
+A source of examples of almost nonnegatively curved manifold is provided by the total spaces of towers of fiber bundles of certain type. We prove the concusion of the torsion in center conjecture for these examples.
+\end{abstract}
+
+
+\section{Introduction}
+
+In \cite{KPT} we formulated the following conjecture.
+
+\begin{mconj}\label{con:tor}
+There is $C=C(m)$ such that if $M^m$ is almost nonnegatively curved then there is a nilpotent subgroup $N\subset \pi_1M$ of index $\le C$ whose torsion is contained in its center.
+\end{mconj}
+
+It generalizes the following conjecture formulated by Fukaya and Yamaguchi in \cite{FY} .
+
+\begin{conj}[Fukaya--Yamaguchi]\label{con:c-ab}
+The fundamental group of a nonnegatively curved  $m$-manifold is $C(m)$-abelian;
+that is, there is $C=C(m)$ such that if $M^m$ is nonnegatively curved then there is abelian subgroup $A\subset \pi_1M$ of index $\le C$.
+\end{conj}
+
+Indeed, Conjecture ~\ref{con:tor} immideately implies that the fundamental
+groups of closed positively curved $m$-manifolds are $C(m)$-abelian.
+Further, if $\sec(M)\ge0$, then the universal cover $\tilde M$ of $M$ is isometric to the product $\mathbb{R}^n\times K$, where $K$ is a compact Riemannian manifold and the $\pi_1M$ action  on $\mathbb{R}^n\times K$ is diagonal.
+It follows from \cite[Cor. 6.3]{wilking} that one can deform the metric on $M$ so that its universal cover is still isometric to $\mathbb{R}^n\times K$ and the induced action on $K$ is finite.
+By passing, as in the proof of \cite[Corollary 4.6.1]{KPT}, to the induced action on the frame bundle of $K$, one reduces the statement to Conjecture~\ref{con:tor}.
+The proof for nonnegative curvature was suggested to us by Burkhard Wilking.
+
+The natural approach the to the main conjecture would be studying successive blow-ups of the
+collapsing sequence $M_n$ as done in \cite[Section 4.3]{KPT}.
+In this note we show that the Conjectures~\ref{con:tor} is true if all the spaces $A_i$ which appear in the construction in the construction are closed Riemannian manifolds.
+In this case the the collapsing of blow-ups happens along the fiber bundles.
+Therefore the conjecture follows from the following purely topological statement.
+
+\begin{thm}\label{thm:smooth}
+Let $F_1,F_2,\dots,F_n$ be an array of compact manifolds 
+such that each $F_i$ is either $\mathbb{S}^{1}$ or is simply connected. 
+Assume $E$ is the total space of a tower of fiber bundles over a point
+$$E=E_n\buildrel {F_n}\over \longrightarrow E_{n-1}\buildrel {F_{n-1}}\over\longrightarrow\dots\buildrel {F_1}\over\longrightarrow E_0=\{pt\}$$
+and each of the bundles $E_k\buildrel {F_k}\over \longrightarrow E_{k-1}$ is homotopically trivial over the $1$-skeleton. 
+Then the fundamental group $\pi_1E$ contains a nilpotent subgroup $N$ such that
+$$[\pi_1E:N]\le \mathrm{Const}(F_1,F_2,\dots,F_n)\quad\text{and}\quad\mathrm{Tor}(N)\subset \mathrm{Z}(N),$$
+where $\mathrm{Tor}(N)$ and $\mathrm{Z}(N)$ denote the torsion and the center of $N$ correspondingly.
+\end{thm}
+
+The proof we found is surprisingly complicated.
+For several years we were trying to extend it to the singular fibrations, and prove this way the main conjecture.
+Finally we decided to publish the result as it is in hope that someone else will find a way out.
+
+Please write us if you know a proof of \ref{thm:smooth} based on a different idea,
+such a proof would likely lead to the solution of the main conjecture.
+
+\small
+\bibliographystyle{alpha}
+%\bibliography{kpt}
+
+%\begin{comment}
+\begin{thebibliography}{HMR75}
+\bibitem[DDK]{DDK}{Dror, E. and Dwyer, W. G. and Kan, D. M.},
+ \textit{Self-homotopy equivalences of virtually nilpotent spaces},
+{Comment. Math. Helv.},
+{56},
+{1981},
+{4},
+pp. {599--614},
+
+\bibitem[FY]{FY}
+K.~Fukaya and T.~Yamaguchi.
+\newblock The fundamental groups of almost nonnegatively curved manifolds.
+\newblock {\em Ann. of Math. (2)}, 136(2):253--333, 1992.
+
+
+\bibitem[KPT]{KPT} Kapovitch, Vitali, Anton Petrunin, and Wilderich Tuschmann. 
+\newblock Nilpotency, almost nonnegative curvature, and the gradient flow on Alexandrov spaces. 
+\newblock Annals of Mathematics (2010), 343--373.
+
+\bibitem[W]{wilking}
+Wilking, Burkhard. \newblock On fundamental groups of manifolds of nonnegative curvature. \newblock  Differential Geom. Appl.  13  (2000),  no. 2, 129--165.
+\end{thebibliography}
+
+
+\end{document}
