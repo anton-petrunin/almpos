@@ -88,6 +88,66 @@ Finally we decided to publish the result as it is in hope that someone else will
 Please write us if you know a proof of \ref{thm:smooth} based on a different idea,
 such a proof would likely lead to the solution of the main conjecture.
 
+\section{Reduction}
+
+Let $M$ be almost nonnegatively curved manifold.
+Equip $M$ with a sequence of metrics $g_n$ such that $\sec(g_n)>\tfrac1n$ and $\diam (M,g_n)\to 0$ and $n\to\infty$.
+Let us apply the blow-up construction as in \cite[Subsection 4.3]{KPT}.
+
+\begin{thm}
+Let $M_n$ be a sequence of Riemannian manifolds such that $\sec(M_n)>\tfrac1n$ and $\diam M_n\to 0$ and $n\to\infty$.
+
+Assume that for any choices of points $\bar p_n$ each of the Alexandrov spaces $A_0,A_1,\z\dots,A_\ell$ in the blow-up construction from \cite[Subsection 4.3]{KPT} are Riemannian manifold.
+(This is assumption is totally unjustified.)
+
+Then after passing to a subsequence of $M_n$,
+each $M_n$ is homeomorphic to the total space of a tower of fiber bundles
+$$M_n=E_n\buildrel {F_n}\over \longrightarrow E_{n-1}\buildrel {F_{n-1}}\over\longrightarrow\dots\buildrel {F_1}\over\longrightarrow E_0=\{pt\}$$
+for a fixed array $F_1,F_2,\dots,F_n$  of compact manifolds 
+such that each $F_i$ is either $\mathbb{S}^{1}$ or is simply connected.
+Moreover, each of the bundles $E_k\buildrel {F_k}\over \longrightarrow E_{k-1}$ is homotopically trivial over the $1$-skeleton.  
+\end{thm}
+
+\begin{proof}
+Recall that after passing to a a subsequence we know that the rescaling $\tfrac1{\theta_{1,n}}\cdot M_n$ converge to $A_1$.
+By Yamaguchi fibration theorem each $M_n$ is a fiber bundle over $A_1$,
+denote its fiber by $M_{n,1}$.
+
+The manifolds $M_{n,1}$ also collapse to a point and they with curvature bounded below in a generalized sense.
+Namely, if $k_1=\dim A_1$ then there is a metric on $M_{n,1}\times\mathbb{R}^{k_1}$ such that (1) ??? and (2) ???.
+The Yamaguchi fibration theorem admits a straightforward generalization to the described type of collapsing.
+This way we get a fibration of $M_{n,1}$ over $A_2$ with the fiber $M_{n,2}$.
+
+Continuing this way we get a sequence 
+$$\{p_n\}=M_{n,\ell}\subset \cdots \subset M_{n,2}\subset M_{n,1}=M_n.$$
+One can build a tower of fiber bundles which build from the top to the butom.
+Namely 
+$$M_{n,i}\buildrel{M_{n,i+1}}\over\longrightarrow A_i$$
+
+Let us show that the tower can be also build from below.
+That is,
+$$M_n=E_\ell'\buildrel {A_\ell}\over \longrightarrow E_{\ell-1}'\buildrel {A_{\ell-1}}\over\longrightarrow\dots\buildrel {A_1}\over\longrightarrow A_0=\{pt\}.$$
+
+...
+
+Consider a loop $\gamma$ in $E'_i$.
+Lift it to a homotopy of maps 
+Let $f_t\colon A_{i+1}\to E'_{i+1}$.
+From ???, it foloows that the map $f_1\colon A_{i+1}\to A_{i+1}$ is homotopic to an isometry.
+In particular, after passing to a finite cover with number of fibers depending on geometry of $A_i$,
+we can assume that $f_1$ is homotopic to the identity map.
+It follows that we can assume that all the fiber bundles in the tower admit a trivialization over 1-skeleton.
+
+Our next aim is to split the constructed tower in a finer tower, exchanging each $A_i$-bundle by a tower of $\mathbb{S}^1$-bundles and ???.
+
+
+...
+
+
+
+\end{proof}
+
+
 \small
 \bibliographystyle{alpha}
 %\bibliography{kpt}
