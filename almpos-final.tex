@@ -2107,16 +2107,9 @@ Can one give an explicit bound on $C(m)$ in Theorem ~\ref{intro:main2}?
 In this appendix we prove a topological theorem.
 It implies  the main conjecture \ref{con:tor} in the case if \emph{all the Alexandrov spaces $A_i$ which appear in the construction in  Section \ref{sec:constr} for all possible choices of base points are closed Riemannian manifolds}.
 
-The implication mainly follows from Yamaguchi's fibration theorem, but the proof requires some work:
-(1) the fibration theorem gives a tower of bundles build from above meaning that on each step, we use already constructed tower of bundles as a fiber
-and we need to reconstruct this tower from below meaning that we use the constructed tower as the base of next bundle --- $A_i$ become the fibers of obtained tower; 
-(2) we need to pass to controlled covering so that each fibers split into bundles admit trivialization over 1-dimensional skeletons and each fiber bundle splits into bundles with circles and simply connected spaces as fibers --- to prove it we use an argument similar to the one given in Section~\ref{sec:nilp}.
-We omit the proof of this implication since the assumption on $A_i$ is unnatural  
-which gives no geometric value to the conclusion.
-
 The proof of \ref{thm:top} which we present is surprisingly involved.
 If you see an other proof please share it with us --- it might lead to the solution of the main Conjecture \ref{con:tor} in general case.
-The assumption in the theorem seem to capture the topology of the main source of examples of the needed collapse, so it worth to consider even if you do not believe in the reduction of the special case of the main conjecture to the theorem \ref{thm:top} 
+The assumption in the theorem  capture the topology of the main source of examples of the needed collapse, so it worth to consider even if you do not believe in the reduction of the special case of the main conjecture to the theorem \ref{thm:top} 
 
 \begin{thm}\label{thm:top}
 Let $F_1,F_2,\dots,F_n$ be an array of compact manifolds 
@@ -2129,8 +2122,16 @@ $$[\pi_1E:N]\le \mathrm{Const}(F_1,F_2,\dots,F_n)\quad\text{and}\quad\mathrm{Tor
 where $\mathrm{Tor}(N)$ and $\mathrm{Z}(N)$ denote the torsion and the center of $N$ correspondingly.
 \end{thm}
 
+The reduction of the described case of the main conjecture to the theorem \ref{thm:top} mainly follows from Yamaguchi's fibration theorem but the proof requires some work:
+(1) The fibration theorem gives a tower of bundles build from above meaning that on each step, we use already constructed tower as a fiber.
+We need to reconstruct this tower from below meaning that we use the constructed tower as the base of next bundle.
+The spaces $A_i$ become the fibers of obtained tower; by passing to a subsequence, we may assume that the topology of these spaces is fixed.
+(2) We need to pass to finite covering (with number of folds bounded in terms of $A_i$) so that each bundle admits a trivialization over a 1-dimensional skeleton of the base and each fiber bundle splits into bundles with circles and simply connected spaces as fibers --- to prove it we use an argument similar to the one given in Section~\ref{sec:nilp}.
+We omit the proof of this implication since the assumption on $A_i$ is unnatural  
+which gives no geometric value to the conclusion.
 
-In the proof we use the following result proved by Dror,  Dwyer and Kan in \cite{DDK}.
+
+In the proof of \ref{thm:top} we use the following result proved by Dror,  Dwyer and Kan in \cite{DDK}.
 
 \begin{thm}\label{thm:DDK}
 Let $F$ be a finite simply connected CW-complex and 
@@ -2250,7 +2251,7 @@ By taking the pullback of $F\to E\to B$ to a finite cover of $B$ we can assume t
 
 Let $\gamma\in \pi_1(E,p)$ and $\alpha\in \pi_2(E,p)$. 
 Let us denote by $\bar\gamma\in \pi_1(B,\bar p)$ and 
-$\bar\alpha\in \pi_2(B,\bar p)$ their projections to $B$.
+$\bar\alpha\z\in \pi_2(B,\bar p)$ their projections to $B$.
 
 By assumptions, there is a map
 $h\colon \mathbb{S}^2\times \mathbb{S}^1\to B$ such that 
