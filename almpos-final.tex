@@ -1519,7 +1519,7 @@ then $\Gamma$ is $C(m)$-nilpotent.
 
 As was pointed out to us by B.~Wilking,
 in the above reformulation of Theorem~\ref{thm:cnilp}
-one can actually easily remove the assumption
+one can actually remove the assumption
 that the $\Gamma$ action be free.
 
 \begin{cor}\label{cor:nonfree}
@@ -2103,14 +2103,22 @@ Can one give an explicit bound on $C(m)$ in Theorem ~\ref{intro:main2}?
 \appendix
 \section{Torsion in the center for the smooth case}
 
-In this appendix we prove that the Main Conjecture \ref{con:tor} holds if all the Alexandrov spaces $A_i$ which appear in the construction in  Section \ref{sec:constr} are closed Riemannian manifolds.
-We would be very interested to know if a proof different from the one given below can be found.
-
 \subsection{}
-Note that by Yamaguchi's theorem, the statement can be reformulated using purely topological language.
+In this appendix we prove a topological theorem.
+It implies  the main conjecture \ref{con:tor} in the case if \emph{all the Alexandrov spaces $A_i$ which appear in the construction in  Section \ref{sec:constr} for all possible choices of base points are closed Riemannian manifolds}.
 
+The implication mainly follows from Yamaguchi's fibration theorem, but the proof requires some work:
+(1) the fibration theorem gives a tower of bundles build from above meaning that on each step, we use already constructed tower of bundles as a fiber
+and we need to reconstruct this tower from below meaning that we use the constructed tower as the base of next bundle --- $A_i$ become the fibers of obtained tower; 
+(2) we need to pass to controlled covering so that each fibers split into bundles admit trivialization over 1-dimensional skeletons and each fiber bundle splits into bundles with circles and simply connected spaces as fibers --- to prove it we use an argument similar to the one given in Section~\ref{sec:nilp}.
+We omit the proof of this implication since the assumption on $A_i$ is unnatural  
+which gives no geometric value to the conclusion.
 
-\begin{thm}
+The proof of \ref{thm:top} which we present is surprisingly involved.
+If you see an other proof please share it with us --- it might lead to the solution of the main Conjecture \ref{con:tor} in general case.
+The assumption in the theorem seem to capture the topology of the main source of examples of the needed collapse, so it worth to consider even if you do not believe in the reduction of the special case of the main conjecture to the theorem \ref{thm:top} 
+
+\begin{thm}\label{thm:top}
 Let $F_1,F_2,\dots,F_n$ be an array of compact manifolds 
 such that each $F_i$ is either $\mathbb{S}^{1}$ or is simply connected. 
 Assume $E$ is the total space of a tower of fiber bundles over a point
@@ -2120,6 +2128,7 @@ Then the fundamental group $\pi_1E$ contains a nilpotent subgroup $N$ such that
 $$[\pi_1E:N]\le \mathrm{Const}(F_1,F_2,\dots,F_n)\quad\text{and}\quad\mathrm{Tor}(N)\subset \mathrm{Z}(N),$$
 where $\mathrm{Tor}(N)$ and $\mathrm{Z}(N)$ denote the torsion and the center of $N$ correspondingly.
 \end{thm}
+
 
 In the proof we use the following result proved by Dror,  Dwyer and Kan in \cite{DDK}.
 

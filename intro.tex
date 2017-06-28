@@ -47,14 +47,14 @@ A source of examples of almost nonnegatively curved manifold is provided by the 
 In \cite{KPT} we formulated the following conjecture.
 
 \begin{mconj}\label{con:tor}
-There is $C=C(m)$ such that if $M^m$ is almost nonnegatively curved then there is a nilpotent subgroup $N\subset \pi_1M$ of index $\le C$ whose torsion is contained in its center.
+There is $C=C(m)$ such that if $M^m$ is almost nonnegatively curved then there is a nilpotent subgroup $N\subset \pi_1M$ of index  at most $C$ whose torsion is contained in its center.
 \end{mconj}
 
-It generalizes the following conjecture formulated by Fukaya and Yamaguchi in \cite{FY} .
+Note that it generalizes the following conjecture formulated by Fukaya and Yamaguchi in \cite{FY}.
 
 \begin{conj}[Fukaya--Yamaguchi]\label{con:c-ab}
 The fundamental group of a nonnegatively curved  $m$-manifold is $C(m)$-abelian;
-that is, there is $C=C(m)$ such that if $M^m$ is nonnegatively curved then there is abelian subgroup $A\subset \pi_1M$ of index $\le C$.
+that is, there is $C=C(m)$ such that if $M^m$ is nonnegatively curved then there is abelian subgroup $A\subset \pi_1M$ of index  at most $C$.
 \end{conj}
 
 Indeed, Conjecture ~\ref{con:tor} immideately implies that the fundamental
@@ -62,13 +62,14 @@ groups of closed positively curved $m$-manifolds are $C(m)$-abelian.
 Further, if $\sec(M)\ge0$, then the universal cover $\tilde M$ of $M$ is isometric to the product $\mathbb{R}^n\times K$, where $K$ is a compact Riemannian manifold and the $\pi_1M$ action  on $\mathbb{R}^n\times K$ is diagonal.
 It follows from \cite[Cor. 6.3]{wilking} that one can deform the metric on $M$ so that its universal cover is still isometric to $\mathbb{R}^n\times K$ and the induced action on $K$ is finite.
 By passing, as in the proof of \cite[Corollary 4.6.1]{KPT}, to the induced action on the frame bundle of $K$, one reduces the statement to Conjecture~\ref{con:tor}.
-The proof for nonnegative curvature was suggested to us by Burkhard Wilking.
+The described  proof for nonnegative curvature was suggested to us by Burkhard Wilking.
 
-The natural approach the to the main conjecture would be studying successive blow-ups of the
+The natural approach to the main conjecture would be studying successive blow-ups of the
 collapsing sequence $M_n$ as done in \cite[Section 4.3]{KPT}.
 In this note we show that the Conjectures~\ref{con:tor} is true if all the spaces $A_i$ which appear in the construction in the construction are closed Riemannian manifolds.
-By Yamaguchi's fibration theorem \cite{Yam}, the statement can be reformulated using purely topological language. this case the the collapsing of blow-ups happens along the fiber bundles.
-Therefore the conjecture follows from the following purely topological statement.
+This statement can be reformulated using purely topological language as below.
+The reduction is done by using Yamaguchi's fibration theorem \cite{Yam};
+see the sketch in the Section~\ref{sec:reduction}.
 
 \begin{thm}\label{thm:smooth}
 Let $F_1,F_2,\dots,F_n$ be an array of compact manifolds 
@@ -81,18 +82,54 @@ $$[\pi_1E:N]\le \mathrm{Const}(F_1,F_2,\dots,F_n)\quad\text{and}\quad\mathrm{Tor
 where $\mathrm{Tor}(N)$ and $\mathrm{Z}(N)$ denote the torsion and the center of $N$ correspondingly.
 \end{thm}
 
+Mathematically speaking we just prove this statement;
+the rest of the paper is the motivation.
 The proof we found is surprisingly complicated.
 For several years we were trying to extend it to the singular fibrations, and prove this way the main conjecture.
 Finally we decided to publish the result as it is in hope that someone else will find a way out.
 
 Please write us if you know a proof of \ref{thm:smooth} based on a different idea,
-such a proof would likely lead to the solution of the main conjecture.
+such a proof might lead to the solution of the main conjecture.
 
-\section{Reduction}
+\section{Reduction}\label{sec:reduction}
+
+In this section we sketch a reduction of the main conjecture (\ref{con:tor}) to the main theorem (\ref{thm:smooth}) in the case if all the partial limits of all blow-ups in the construction given in \cite[Subsection 4.3]{KPT} are smooth. 
+First we need to formulate the statement precisely. 
 
 Let $M$ be almost nonnegatively curved manifold.
 Equip $M$ with a sequence of metrics $g_n$ such that $\sec(g_n)>\tfrac1n$ and $\diam (M,g_n)\to 0$ and $n\to\infty$.
-Let us apply the blow-up construction as in \cite[Subsection 4.3]{KPT}.
+Applying the blow-up construction as in \cite[Subsection 4.3]{KPT},
+for any choices of points $\bar p_n\in M_n=(M,g_n)$
+we get a sequence of Alexandrov spaces $ A_1,\dots, A_\ell$.
+
+Now assume that for all choices of the sequence $\bar p_n\in M_n$
+the Alexandrov spaces $A_1,\dots, A_\ell$ are Riemannian.
+(This is assumption is totally unjustified.)
+
+In this case after passing to a subsequence of $M_n$,
+each $M_n$ is homeomorphic to the total space of a tower of fiber bundles
+$$M_n=E_\ell\buildrel {A_\ell}\over \longrightarrow E_{n-1}\buildrel {A_{\ell-1}}\over\longrightarrow\dots\buildrel {A_1}\over\longrightarrow E_0=\{pt\}.$$
+
+Indeed, after passing to a a subsequence we know that the rescaling $\tfrac1{\theta_{1,n}}\cdot M_n$ converge to $A_1$.
+By Yamaguchi fibration theorem each $M_n$ is a fiber bundle over $A_1$, denote its fiber by $M_{n,1}$.
+Each fiber $M_{n,1}$ is close to the space $A_2$ for the appropriate choice of the sequence $\bar p_n\in M_n$
+and it fibers over $A_2$ with fiber $M_{n,2}$.
+It follows that we can build first two lower levels of the tower
+$$M_n\buildrel {M_{n,2}}\over \longrightarrow A_1=E_1\buildrel {A_1}\over\longrightarrow E_0=\{pt\}.$$
+Continuing this way we get the needed tower.
+
+Each $A_i$ has nonnegative curvature.
+In particular, after passing to a finite cover $A_i$ is a total space a fiber bundles over torus with the simply connected fibers.
+Moreover the induced $A_i$-bundle over any closed loop $\gamma$ on $E_{i-1}$ is homotopic to the cylinder  $A_i\times[0,1]$ with the top $A_i\times 1$ glued to the bottom $A_i\times 0$ along an isometry.
+This can be proved along the same lines as the corollary 3.1.2. 
+
+It follows that there is a constant $k_i$ which depends only on the $A_i$ such that  
+after passing to at most $k_i$-folded  cover of $E_{i-1}$, we can assume that $A_i$-bundle over $E_{i-1}$ admits a tivialization on 1-skeleton.
+
+Indeed, applying the gradient flow estimates as in ??? we get that $A_i$ and $A_i'$
+are the spaces obtained for different choice of the sequences $\bar p_n\in M_n$
+then there are homotopy equivalences $A_i\to A_i'$ and $A_i'\to A_i$ with uniform bound on the Lipschitz constant.
+
 
 \begin{thm}
 Let $M_n$ be a sequence of Riemannian manifolds such that $\sec(M_n)>\tfrac1n$ and $\diam M_n\to 0$ and $n\to\infty$.
