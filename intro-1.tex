@@ -31,7 +31,8 @@ Germany}\email{tusch@math.uni-kiel.de}
 
 \maketitle
 \begin{abstract}
-We give a condition for towers of fiber bundles which implies that torsion of the fundamental group of its total space is nilpontent and its torsion lies in its center.
+We give a condition for towers of fiber bundles which implies that the fundamental group of its total space has a nilpontent subgroup of finite index such that its torsion lies in its center.
+Moreover the index of the subgroup can be bounded in terms of the fibers of the tower.
 
 The theorem is motivated by a conjecture that
 any almost nonnegatively curved $m$-dimesional manifold $M$ 
@@ -42,7 +43,7 @@ such that the torsion of the fundamental group $\pi_1 \tilde M$ lies in its cent
 
 \section{Introduction}
 
-The following topological result is motivated by Conjecture~\ref{con:tor} in the next section.
+The following topological result is motivated by Conjecture~\ref{con:tor}.
 Our proof  is surprisingly complicated.
 We would be interested in finding an easier proof;
 among other reasons because it might be generalizable to proving the conjecture.
@@ -70,7 +71,7 @@ The following earlier conjecture of Fukaya and Yamaguchi \cite{FY} is closely re
 
 \begin{conj}[Fukaya--Yamaguchi]\label{con:c-ab}
 The fundamental group of a nonnegatively curved  $m$-manifold is $C(m)$-abelian;
-that is, there is $C=C(m)$ such that if $M^m$ is nonnegatively curved then there is abelian subgroup $A\subset \pi_1M$ of index  at most $C$.
+that is, there is $C=C(m)$ such that if $M^m$ is nonnegatively curved then there is abelian subgroup $A\subset \pi_1M$ of index  at most~$C$.
 \end{conj}
 
 Let us show that our main conjecture (if true) implies Conjecture \ref{con:c-ab}.
@@ -90,7 +91,8 @@ an abelian subgroup of index $\le C(m)$. Thus, both $\Gamma_1$ and $\Gamma_2$ ar
 
 Almost nonnegatively curved manifold can be defined as a manifold $M$ which admits a sequence of metrics $g_n$ with a universal lower curvature bound which converges to a point in the sense of Gromov--Hausdorff.
 
-An approach to studying almost nonnegatively curved manifolds is by studying successive blow-ups of the collapsing sequence $M_n=(M,g_n)$ as done in \cite[Section 4.3]{KPT} which we are about to describe.
+An approach to studying almost nonnegatively curved manifolds is by studying successive blow-ups of the collapsing sequence $M_n=(M,g_n)$ as done in \cite[Section 4.3]{KPT}.
+Let us describe this construction.
 
 The sequence $(M_n)$ converges to a point; this one-point space will be denoted by $A_0$.
 
@@ -121,14 +123,13 @@ Set $k_2:=k_1+\dim A_2$.
 If one now chooses a marked point in $M_{n,2}$,
 then, as $n\to\infty$,
 $M_n/\vartheta_{n,2}$ converges to $A_2\times\mathbb{R}^{k_1}$,
-which is of some dimension $k_2>k_1$.
+which is of dimension $k_2$.
 
 We repeat this procedure until, at some step, $k_\ell=m$.
 
 \medskip
 
-As a result one obtains
-a sequence $\{A_i\}$ of compact nonnegatively curved Alexandrov spaces
+As a result we obtain a sequence $\{A_i\}$ of compact nonnegatively curved Alexandrov spaces
 with diameter $1$ that satisfies
 $$\dim A_i=k_i-k_{i-1} 
 \quad\text{ and therefore }\quad
@@ -138,7 +139,7 @@ a sequence of rescaling factors $\vartheta_{n,i}=\diam M_{n,i}$,
 and  a nested sequence of submanifolds
 $$\{p_n\}=M_{n,\ell}\subset \cdots \subset M_{n,2}\subset M_{n,1}=M_n,$$
 
-Now let us assume that for all choices of the sequence $\bar p_n\in M_n$
+Now let us assume that for all choices of $\bar p_i$
 the Alexandrov spaces $A_1,\dots, A_\ell$ are closed  Riemannian manifolds.
 It will be called \emph{rescaled smoothness assumption}.
 
@@ -171,6 +172,10 @@ such that
 \end{enumerate}
 
 This finally leads us to the main topological result of this paper which says that if such tower of bundles exists then its total space satisfies the conclusion of Conjecture~\ref{con:tor}.
+
+We have not worked out the details of the reduction as we do not see a geometric condition which would imply the rescaled smoothness assumption.
+In fact it might  be possible to do the reduction even in the case if all $A_i$ are general  Alexandrov spaces  \emph{without  boundary} and we have no idea what to do if at least one of them has nonempty boundary.
+
 
 \section{Proof of the theorem}
 
