@@ -43,9 +43,9 @@ such that the torsion of the fundamental group $\pi_1 \tilde M$ lies in its cent
 
 \section{Introduction}
 
-The following topological result is motivated by Conjecture~\ref{con:tor}.
+In this paper we prove the following topological result  motivated by Conjecture~\ref{con:tor} below.
 Our proof  is surprisingly complicated.
-We would be interested in finding an easier proof;
+We would be very interested in finding an easier proof;
 among other reasons because it might be generalizable to proving the conjecture.
 
 \begin{thm}\label{thm:smooth}
@@ -54,9 +54,10 @@ such that each $F_i$ is either $\mathbb{S}^{1}$ or is simply connected.
 Assume $E$ is the total space of a tower of fiber bundles over a point
 $$E=E_n\buildrel {F_n}\over \longrightarrow E_{n-1}\buildrel {F_{n-1}}\over\longrightarrow\dots\buildrel {F_1}\over\longrightarrow E_0=\{pt\}$$
 and each of the bundles $E_k\buildrel {F_k}\over \longrightarrow E_{k-1}$ is homotopically trivial over the $1$-skeleton. 
-Then the fundamental group $\pi_1E$ contains a nilpotent subgroup $N$ such that
-$$[\pi_1E:N]\le \mathrm{Const}(F_1,F_2,\dots,F_n)\quad\text{and}\quad\mathrm{Tor}(N)\subset \mathrm{Z}(N),$$
-where $\mathrm{Tor}(N)$ and $\mathrm{Z}(N)$ denote the torsion and the center of $N$ correspondingly.
+Then the fundamental group $\pi_1E$ contains a nilpotent subgroup $\Gamma$ such that
+$$[\pi_1E:\Gamma]\le \mathrm{Const}(F_1,F_2,\dots,F_n)\quad\text{and}\quad\mathrm{Tor}(\Gamma)\subset \mathrm{Z}(\Gamma),$$
+where $\mathrm{Tor}(\Gamma)$ and $\mathrm{Z}(\Gamma)$ denote the torsion and the center of $\Gamma$ correspondingly.
+%I changed $N$ to $\Gamma$ because later $N$ is used to denote a manifold.
 \end{thm}
 
 \section{Motivation}
@@ -79,7 +80,7 @@ Let us show that our main conjecture (if true) implies Conjecture \ref{con:c-ab}
 If the fundamental group of $M$ is finite (in particular if $M$ is positively curved) then whole group is torsion.
 In this case Conjecture~\ref{con:tor} and Theorem B in \cite{KPT} imply Conjecture~\ref{con:c-ab}.
 The general case is more tricky;
-the following argument (cf. \cite[Corollary 4.6.1]{KPT}) suggested to us by Burkhard Wilking.
+the following argument (cf. \cite[Corollary 4.6.1]{KPT}) was suggested to us by Burkhard Wilking.
 
 If $\sec(M^m)\ge0$, then the universal cover $\tilde M$ of $M$ is isometric to the product $\mathbb{R}^n\times K$, where $K$ is a compact Riemannian manifold and the $\pi_1M$ action  on $\mathbb{R}^n\times K$ is diagonal~\cite{CG72}.
 It follows from \cite[Cor. 6.3]{wilking} that one can deform the metric on $M$ so that its universal cover is still isometric to $\mathbb{R}^n\times K$ and the induced action on $K$ is finite. Let $\Gamma_1$ be the image of $\pi_1M$ in 
@@ -87,14 +88,14 @@ $\Iso(\R^n)$ and $\Gamma_2$ be the image in $\Iso(K)$. By above we can assume th
 Consider the action of $\Gamma_2$ on the frame bundle $F$ of $K$. This action is free and by Cheeger's trick, $F$ admits a sequence of almost nonnegatively curved metrics~\cite{FY}. Since $\Gamma_2$ is finite, by Conjecture~\ref{con:tor} it contains 
 an abelian subgroup of index $\le C(m)$. Thus, both $\Gamma_1$ and $\Gamma_2$ are $C(m)$-abelian which  yields Conjecture~\ref{con:c-ab}.
 
-\subsection{} We will explain now how Theorem~\ref{thm:smooth} is related to Conjecture~\ref{con:tor}.
+\subsection{} Next, let us explain  how Theorem~\ref{thm:smooth} is related to Conjecture~\ref{con:tor}.
 
-Almost nonnegatively curved manifold can be defined as a manifold $M$ which admits a sequence of metrics $g_n$ with a universal lower curvature bound which converges to a point in the sense of Gromov--Hausdorff.
+Almost nonnegatively curved manifold can be defined as a closed manifold $M$ which admits a sequence of metrics $g_n$ with a universal lower curvature bound which converges to a point in the sense of Gromov--Hausdorff.
 
 An approach to studying almost nonnegatively curved manifolds is by studying successive blow-ups of the collapsing sequence $M_n=(M,g_n)$ as done in \cite[Section 4.3]{KPT}.
 Let us describe this construction.
 
-The sequence $(M_n)$ converges to a point; this one-point space will be denoted by $A_0$.
+The sequence $\{M_n\}$ converges to a point; this one-point space will be denoted by $A_0$.
 
 Set $M_{n,1}:=M_n$ and $\vartheta_{n,1}:=\diam M_{n,1}$.
 Rescale now $M_{n,1}$ by $\tfrac{1}{\vartheta_{n,1}}$
@@ -122,10 +123,10 @@ As before, $A_2$ is a compact nonnegatively curved Alexandrov space with diamete
 Set $k_2:=k_1+\dim A_2$.
 If one now chooses a marked point in $M_{n,2}$,
 then, as $n\to\infty$,
-$M_n/\vartheta_{n,2}$ converges to $A_2\times\mathbb{R}^{k_1}$,
+$$\frac{1}{\vartheta_{n,2}}{\cdot} M_{n}$$ pointed converges to $A_2\times\mathbb{R}^{k_1}$,
 which is of dimension $k_2$.
 
-We repeat this procedure until, at some step, $k_\ell=m$.
+We repeat this procedure until, at some step, $k_\ell=m$ where $m=\dim M$.
 
 \medskip
 
@@ -139,29 +140,29 @@ a sequence of rescaling factors $\vartheta_{n,i}=\diam M_{n,i}$,
 and  a nested sequence of submanifolds
 $$\{p_n\}=M_{n,\ell}\subset \cdots \subset M_{n,2}\subset M_{n,1}=M_n,$$
 
-Now let us assume that for all choices of $\bar p_i$
+Now let us assume that \emph{for all choices of $\bar p_i$}
 the Alexandrov spaces $A_1,\dots, A_\ell$ are closed  Riemannian manifolds.
 It will be called \emph{rescaled smoothness assumption}.
 
 This assumption definitely \emph{need not} hold in general;
 it is made only to simplify the problem.
-Mainly, it makes possible to apply the following fibration theorem of Yamaguchi~\cite{Yam} to the successive blow-ups of the collapsing sequence under consideration.
+Mainly, it makes it possible to apply the following fibration theorem of Yamaguchi~\cite{Yam} to the successive blow-ups of the collapsing sequence under consideration.
 
 \begin{thm}[Yamaguchi's Fibration Theorem]
 Let $M_n$ be a sequence of $m$-dimensional Riemannian manifolds with sectional curvatue at least $k$ and the diameters at most $D$, which converges to a Riemannian manifold $N$ in the sense of Gromov--Hausdorff.
 Then for all large $n$ there exists an almost Riemannian submersion $f_n\co M_n\to N$.
-In particular, $f_n$ are a fiber bundles.
+In particular, $f_n$ is a fiber bundle.
 \end{thm}
 
 If $M_n$ as above satisfies the rescaled smoothness assumption.
-Then it is plausible that after passing to a subsequence of $M_n$,
+Then it should be true that after passing to a subsequence of $M_n$,
 each $M_n$ is homeomorphic to the total space of a tower of fiber bundles
 \[
 M_n=E_\ell\buildrel {A_\ell}\over \longrightarrow E_{n-1}\buildrel {A_{\ell-1}}\over\longrightarrow\dots\buildrel {A_1}\over\longrightarrow E_0=\{pt\}.
 \]
 Moreover, by using the Lipschitz properties of the gradient flow,
-it looks possible to pass to a finite cover of the total space with number of folds controlled by topology of $A_i$, so that the tower
-further refine this tower of bundles to a tower of the form
+it should be possible to pass to a finite cover of the total space with number of folds controlled by topology of $A_i$, so that the tower of bundles can be
+further refined  to a tower of the form
 \[
 E=E_n\buildrel {F_n}\over \longrightarrow E_{n-1}\buildrel {F_{n-1}}\over\longrightarrow\dots\buildrel {F_1}\over\longrightarrow E_0=\{pt\}
 \]
@@ -171,10 +172,10 @@ such that
 \item Each of the bundles $E_k\buildrel {F_k}\over \longrightarrow E_{k-1}$ is homotopically trivial over the $1$-skeleton. 
 \end{enumerate}
 
-This finally leads us to the main topological result of this paper which says that if such tower of bundles exists then its total space satisfies the conclusion of Conjecture~\ref{con:tor}.
+This finally leads us to the main topological result of this paper (Theorem \ref{thm:smooth} above) which says that if such tower of bundles exists then its total space satisfies the conclusion of Conjecture~\ref{con:tor}.
 
 We have not worked out the details of the reduction as we do not see a geometric condition which would imply the rescaled smoothness assumption.
-In fact it might  be possible to do the reduction even in the case if all $A_i$ are general  Alexandrov spaces  \emph{without  boundary} and we have no idea what to do if at least one of them has nonempty boundary.
+In fact it might  be possible to do the reduction even in the case if all $A_i$ are general  Alexandrov spaces  \emph{without  boundary} but we have no idea what to do if at least one of them has nonempty boundary.
 
 
 \section{Proof of the theorem}
