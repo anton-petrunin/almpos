@@ -1,6 +1,5 @@
 \documentclass{amsart}
-\usepackage{almpos}
-\def\Iso{\mathop{\rm Iso}}
+\usepackage{appendix}
 \usepackage[colorlinks=true,
 citecolor=black,
 linkcolor=black,
@@ -16,8 +15,8 @@ pdfauthor={Vitali Kapovitch, Anton Petrunin and Wilderich Tuschmann}
 \begin{document}
 \title[On torsion in center conjecture]
 {On torsion in center conjecture:\\
-{\small An appendix for ``Nilpotency, almost nonnegative curvature, and gradient flow''}}
-
+(An appendix for ``Nilpotency, almost nonnegative\\
+curvature, and gradient flow'')}
 \thanks{\it 2000 AMS Mathematics Subject Classification:\rm\
 53C20. Keywords: nonnegative curvature, nilpotent}\rm
 \author{Vitali Kapovitch}
@@ -33,64 +32,70 @@ Germany}\email{tusch@math.uni-kiel.de}
 
 \maketitle
 \begin{abstract}
-We report on our attempt to prove that
+We give a condition for towers of fiber bundles which implies that torsion of the fundamental group of its total space is nilpontent and its torsion lies in its center.
+
+The theorem is motivated by a conjecture that
 any almost nonnegatively curved $m$-dimesional manifold $M$ 
 admits a finite cover $\tilde M$ with number of folds bounded in terms of $m$
 such that the torsion of the fundamental group $\pi_1 \tilde M$ lies in its center.
-
-A source of examples of almost nonnegatively curved manifold is provided by the total spaces of towers of fiber bundles of certain type. We prove the conclusion of the torsion in center conjecture for these examples.
 \end{abstract}
 
 
 \section{Introduction}
-A basic result in the study of manifolds with sectional curvature bounded below is the following fibration theorem of Yamaguchi~\cite{Yam}:
-\begin{thm}[Yamaguchi's Fibration Theorem]
-Let $M_n$ be a sequence of $m$-dimensional Riemannian manifolds with $\sec\ge k,\diam\le D$, Gromov-Hausdorff converging to a Riemannian manifold $N$. Then for all large $i$ there exists an almost Riemannian submersion $f_i\co M_i\to N$. In particular, $f_i$ is a fiber bundle.
+
+The motivation for the following topological result comes from geometry;
+it is decried in the next section.
+
+\begin{thm}\label{thm:smooth}
+Let $F_1,F_2,\dots,F_n$ be an array of closed manifolds 
+such that each $F_i$ is either $\mathbb{S}^{1}$ or is simply connected. 
+Assume $E$ is the total space of a tower of fiber bundles over a point
+$$E=E_n\buildrel {F_n}\over \longrightarrow E_{n-1}\buildrel {F_{n-1}}\over\longrightarrow\dots\buildrel {F_1}\over\longrightarrow E_0=\{pt\}$$
+and each of the bundles $E_k\buildrel {F_k}\over \longrightarrow E_{k-1}$ is homotopically trivial over the $1$-skeleton. 
+Then the fundamental group $\pi_1E$ contains a nilpotent subgroup $N$ such that
+$$[\pi_1E:N]\le \mathrm{Const}(F_1,F_2,\dots,F_n)\quad\text{and}\quad\mathrm{Tor}(N)\subset \mathrm{Z}(N),$$
+where $\mathrm{Tor}(N)$ and $\mathrm{Z}(N)$ denote the torsion and the center of $N$ correspondingly.
 \end{thm}
 
-The fibers of the fibrations that occur in Yamaguchi's fibration theorem are essentially \emph {almost nonnegatively curved}.
-\begin{defn}
-A closed smooth manifold $M$ is called almost nonnegatively curved
-if it admits a sequence of Riemannian metrics $\{g_n\}_{n\in\mathbb{N}}$
-whose sectional curvatures and diameters have the following bounds
-$$\sec(M,g_n)\ge -1/n\quad\text{and}\quad\diam(M,g_n)\le 1/n.$$
-\end{defn}
+Our proof of Theorem~\ref{thm:smooth} is surprisingly complicated.
+We would be quite interested in finding an easier proof among other reasons because it might be easier to generalize to proving Conjecture~\ref{con:tor} below.
 
-In \cite{KPT} we formulated the following conjecture.
+\section{Motivation}
+
+\subsection{} The theorem is motivated by the following conjecture form \cite{KPT}.
 
 \begin{mconj}\label{con:tor}
 There is $C=C(m)$ such that if $M^m$ is almost nonnegatively curved then there is a nilpotent subgroup $N\subset \pi_1M$ of index  at most $C$ whose torsion is contained in its center.
 \end{mconj}
-Let us also recall the following earlier conjecture Fukaya and Yamaguchi \cite{FY}.
-%This conjecture generalizes the following conjecture formulated by Fukaya and Yamaguchi in \cite{FY}.
+
+The following earlier conjecture of Fukaya and Yamaguchi \cite{FY} is closely related.
 
 \begin{conj}[Fukaya--Yamaguchi]\label{con:c-ab}
 The fundamental group of a nonnegatively curved  $m$-manifold is $C(m)$-abelian;
 that is, there is $C=C(m)$ such that if $M^m$ is nonnegatively curved then there is abelian subgroup $A\subset \pi_1M$ of index  at most $C$.
 \end{conj}
 
-Since the fundamental group of a positively curved manifold is finite, Conjecture ~\ref{con:tor} immediately implies that the fundamental
-group of a closed positively curved $m$-manifold is $C(m)$-abelian.
+Let us show that our main conjecture (if true) implies the conjecture above.
 
-The following argument (cf.  \cite[Corollary 4.6.1]{KPT}) suggested to us by Burkhard Wilking shows that Conjecture~\ref{con:tor} implies Conjecture~\ref{con:c-ab} in general.
+If the fundamental group of $M$ is finite (in particular if $M$ is positively curved) then whole group is torsion.
+Therefore Conjecture~\ref{con:tor} implies Conjecture~\ref{con:c-ab}.
 
-Indeed, if $\sec(M^m)\ge0$, then the universal cover $\tilde M$ of $M$ is isometric to the product $\mathbb{R}^n\times K$, where $K$ is a compact Riemannian manifold and the $\pi_1M$ action  on $\mathbb{R}^n\times K$ is diagonal~\cite{CG72}.
+The general case is more tricky;
+the following argument (cf. \cite[Corollary 4.6.1]{KPT}) suggested to us by Burkhard Wilking.
+If $\sec(M^m)\ge0$, then the universal cover $\tilde M$ of $M$ is isometric to the product $\mathbb{R}^n\times K$, where $K$ is a compact Riemannian manifold and the $\pi_1M$ action  on $\mathbb{R}^n\times K$ is diagonal~\cite{CG72}.
 It follows from \cite[Cor. 6.3]{wilking} that one can deform the metric on $M$ so that its universal cover is still isometric to $\mathbb{R}^n\times K$ and the induced action on $K$ is finite. Let $\Gamma_1$ be the image of $\pi_1M$ in 
 $\Iso(\R^n)$ and $\Gamma_2$ be the image in $\Iso(K)$. By above we can assume that $\Gamma_2$ is finite. Therefore $\Gamma_1$ is crystallographic. By the third Bieberbach theorem it contains a subgroup of index $\le C(n)$ consisting entirely of translations (and hence abelian).
 Consider the action of $\Gamma_2$ on the frame bundle $F$ of $K$. This action is free and by Cheeger's trick, $F$ admits a sequence of almost nonnegatively curved metrics~\cite{FY}. Since $\Gamma_2$ is finite, by Conjecture~\ref{con:tor} it contains 
 an abelian subgroup of index $\le C(m)$. Thus, both $\Gamma_1$ and $\Gamma_2$ are $C(m)$-abelian which  yields Conjecture~\ref{con:c-ab}.
-\
 
-%The described  proof for nonnegative curvature was suggested to us by Burkhard Wilking.
+\subsection{} We will explain now how Theorem \ref{thm:smooth} is related to the main conjecture.
 
-A natural approach to studying almost nonnegatively curved manifolds (and, more generally, collapsing with lower sectional curvature bound) is by studying successive blow-ups of the
-collapsing sequence $M_n$ as done in \cite[Section 4.3]{KPT}:
+Almost nonnegatively curved manifold can be defined as a manifold $M$ which admits a sequence of metrics $g_n$ with a universal lower curvature bound which converges to a point in the sense of Gromov--Hausdorff.
 
-Let $M_n^m$ be a sequence of closed manifolds satisfying 
-$$\sec(M,g_n)\ge -1/n\quad\text{and}\quad\diam(M,g_n)\le 1/n.$$
+A natural approach to studying almost nonnegatively curved manifolds is by studying successive blow-ups of the collapsing sequence $M_n=(M,g_n)$ as done in \cite[Section 4.3]{KPT}:
 
-
-It clearly Gromov-Hausdorff converges to a point $=:A_0$.
+The sequence $(M_n)$ clearly Gromov--Hausdorff converges to a point in the sense of Gromov--Hausdorff.
+This one-point space will be denoted by $A_0$.
 
 Set $M_{n,1}:=M_n$ and $\vartheta_{n,1}:=\diam M_{n,1}$.
 
@@ -139,10 +144,25 @@ and  a nested sequence of submanifolds
 $$\{p_n\}=M_{n,\ell}\subset \cdots \subset M_{n,2}\subset M_{n,1}=M_n,$$
 
 Now assume that for all choices of the sequence $\bar p_n\in M_n$
-the Alexandrov spaces $A_1,\dots, A_\ell$ are closed  Riemannian manifolds (note that this assumption definitely \emph{need not} hold in general).
+the Alexandrov spaces $A_1,\dots, A_\ell$ are closed  Riemannian manifolds.
+Let us call it \emph{rescaled smoothness assumption}.
+This assumption definitely \emph{need not} hold in general;
+it is made only to simplify the problem.
+Making this assumption makes possible to apply the following fibration theorem of Yamaguchi~\cite{Yam}:
+
+\begin{thm}[Yamaguchi's Fibration Theorem]
+Let $M_n$ be a sequence of $m$-dimensional Riemannian manifolds with sectional curvatue at least $k$ and the diameters at most $D$, which converges to a Riemannian manifold $N$ in the sense of Gromov--Hausdorff.
+Then for all large $n$ there exists an almost Riemannian submersion $f_n\co M_n\to N$.
+In particular, $f_n$ are a fiber bundles.
+\end{thm}
+
+The following statement we formulate as a conjecture, 
+but likely we have a proof of it.
+However the rescaled smoothness assumption???
 
 \begin{conj}[Generalized Yamaguchi's fibration theorem]
-After passing to a subsequence of $M_n$,
+Assume $M_n$ as above satisfies the rescaled smoothness assumption.
+Then after passing to a subsequence of $M_n$ and controlled covers,
 each $M_n$ is homeomorphic to the total space of a tower of fiber bundles
 \[
 M_n=E_\ell\buildrel {A_\ell}\over \longrightarrow E_{n-1}\buildrel {A_{\ell-1}}\over\longrightarrow\dots\buildrel {A_1}\over\longrightarrow E_0=\{pt\}.
@@ -164,20 +184,13 @@ such that
 
 This finally leads us to the main topological result of this paper which says that if such tower of bundles exists then its total space satisfies the conclusion of Conjecture~\ref{con:tor}.
 
-\begin{thm}\label{thm:smooth}
-Let $F_1,F_2,\dots,F_n$ be an array of closed manifolds 
-such that each $F_i$ is either $\mathbb{S}^{1}$ or is simply connected. 
-Assume $E$ is the total space of a tower of fiber bundles over a point
-$$E=E_n\buildrel {F_n}\over \longrightarrow E_{n-1}\buildrel {F_{n-1}}\over\longrightarrow\dots\buildrel {F_1}\over\longrightarrow E_0=\{pt\}$$
-and each of the bundles $E_k\buildrel {F_k}\over \longrightarrow E_{k-1}$ is homotopically trivial over the $1$-skeleton. 
-Then the fundamental group $\pi_1E$ contains a nilpotent subgroup $N$ such that
-$$[\pi_1E:N]\le \mathrm{Const}(F_1,F_2,\dots,F_n)\quad\text{and}\quad\mathrm{Tor}(N)\subset \mathrm{Z}(N),$$
-where $\mathrm{Tor}(N)$ and $\mathrm{Z}(N)$ denote the torsion and the center of $N$ correspondingly.
-\end{thm}
 
-Let us note that our proof of Theorem~\ref{thm:smooth} is surprisingly complicated. We would be quite interested in finding an easier proof among other reasons because it might be easier to generalize to proving Conjecture~\ref{con:tor} in general.
 
-\section{Proof of Theorem \ref{thm:smooth}}
+
+The fibers of the fibrations that occur in Yamaguchi's fibration theorem are \emph {almost nonnegatively curved} in a generalized sense.
+
+
+\section{Proof of the theorem}
 In the proof of \ref{thm:smooth} we use the following result proved by Dror,  Dwyer and Kan in \cite{DDK}.
 
 \begin{thm}\label{thm:DDK}
