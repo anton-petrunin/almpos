@@ -1,37 +1,5 @@
 
 
-\begin{thm}\label{thm:top}
-Let $F_1,F_2,\dots,F_n$ be an array of compact manifolds 
-such that each $F_i$ is either $\mathbb{S}^{1}$ or is simply connected. 
-Assume $E$ is the total space of a tower of fiber bundles over a point
-$$E=E_n\buildrel {F_n}\over \longrightarrow E_{n-1}\buildrel {F_{n-1}}\over\longrightarrow\dots\buildrel {F_1}\over\longrightarrow E_0=\{pt\}$$
-and each of the bundles $E_k\buildrel {F_k}\over \longrightarrow E_{k-1}$ is homotopically trivial over the $1$-skeleton. 
-Then the fundamental group $\pi_1E$ contains a nilpotent subgroup $N$ such that
-$$[\pi_1E:N]\le \mathrm{Const}(F_1,F_2,\dots,F_n)\quad\text{and}\quad\mathrm{Tor}(N)\subset \mathrm{Z}(N),$$
-where $\mathrm{Tor}(N)$ and $\mathrm{Z}(N)$ denote the torsion and the center of $N$ correspondingly.
-\end{thm}
-
-The proof is surprisingly involved.
-If you see an other proof please share it with us --- it might lead to the solution of the main conjecture\kpt.
-
-\subsection{Motivation.} Yamaguchi's fibration theorem gives severe topological restriction for collapsing assuming that the limit space is a Riemannian manifold.
-To make the fibration theorem applicable in the approach described in the paper,
-let us assume that \emph{all the Alexandrov spaces $A_i$ which appear in the construction in  \sectionthree 
-for all possible choices of base points are closed Riemannian manifolds}.
-
-In this case, it seems possible to reduce this case to  theorem \ref{thm:top};
-in fact it might  be possible even in the case if all $A_i$ are general  Alexandrov spaces  \emph{without  boundary}.
-However, we have not worked out the details of the proof as we do not see a  geometric condition which would imply such assumption on $A_i$.%We see a technical way to make a reduction.
-%However does not worth to write a proof for such a partial case --- we do not see a  geometric condition which would imply the assumption on $A_i$.
-
-In any case, since  the assumption in the theorem  capture the topology of the main source of examples of the needed collapse, it is worth considering on its own.
-%even if you do not believe in the reduction. 
-
-%In any case, the assumption in the theorem  capture the topology of the main source of examples of the needed collapse, so it worth to consider even if you do not believe in the reduction. 
-
-\subsection{}
-In the proof of \ref{thm:top} we use the following result proved by Dror,  Dwyer and Kan in \cite{DDK}.
-
 \begin{thm}\label{thm:DDK}
 Let $F$ be a finite simply connected CW-complex and 
 $Aut_0(F)$ be the identity component  of the 
@@ -59,14 +27,15 @@ Since $\Aut_0(F)$ is an $H$-space it's fundamental group
 $\pi_1(E_0(F))$ is abelian. 
 
 By Theorem~\ref{thm:DDK}, $\pi_1(\Aut_0(F))$ is finitely generated,
-therefore the torsion of $\pi_1(\Aut_0(F))$ is finite.
+therefore $\Tor[\pi_1(\Aut_0(F))]$ is finite.
 Hence the corollary follows.
 \end{proof}
 
 Further we denote by $\DD$ the closed unit disc in the complex plane.
 
 \begin{techlem}\label{techlem}
-Let $F$ be a compact simply connected manifold and $h\colon \DD\times F\z\to F$ be 
+Let $F$ be a compact simply connected manifold,
+$h\colon \DD\z\times F\z\to F$ be 
 $\DD$-family of homotopy equivalences $F\to F$ such that $h(u,*)=\mathrm{id}_F$ for any
 $u\in\partial \DD$. 
 Consider the map $\beta_x\colon \DD\to F$ defined by $\beta_x\colon u\mapsto h(u,x)$ for a fixed point $x\in F$. 
@@ -83,7 +52,7 @@ $[f_h]-[f]=[\beta_x]\in \mathrm{Tor}(\pi_2F)$.
 
 The map $h$ induces a map $\mathbb{S}^2\times F\to F$ which with a  slight abuse of notation we'll still denote by $h$. 
 Consider the induced map on cohomology
-$H^{*+2}(F)\overset{h^*}{\longrightarrow} H^{*+2}(\mathbb{S}^2\times F)\to H^*(F)\otimes H^2(\mathbb{S}^2)\cong  H^*(F)$ where the second map is the projection coming from the K\"unneth isomorphism.
+\[H^{*+2}(F)\overset{h^*}{\longrightarrow} H^{*+2}(\mathbb{S}^2\times F)\to H^*(F)\otimes H^2(\mathbb{S}^2)\cong  H^*(F)\] where the second map is the projection coming from the K\"unneth isomorphism.
 We'll denote the resulting map $H^{*+2}(F)\to H^*(F)$ by $D_h$. It's easy to see that it's an algebra derivation on $H^*(F)$. The same obviously holds true for $D_h^\QQ\colon H^{*+2}(F,\QQ)\to H^*(F,\QQ)$
 
 %Then it the correspondent derivation 
@@ -196,8 +165,6 @@ has finite index.
 
 
 \subsection{}
-%Note that $\mathrm{Tor}(\pi_1M)\subset \mathrm{Z}(\pi_1M)$ if $M$ is \emph{reliable} in the sense defined below.
-
 
 \begin{defn}
 A compact connected manifold $M$ is called \emph{reliable} if 
@@ -212,7 +179,8 @@ h(*,v)\sim\tau.$$
 
 \end{defn}
 
-It's obvious that if $M$ is \emph{reliable} then  $\mathrm{Tor}(\pi_1M)\subset \mathrm{Z}(\pi_1M)$.
+Evidently, if $M$ is \emph{reliable} then  $\mathrm{Tor}(\pi_1M)\subset \mathrm{Z}(\pi_1M)$.
+
 \begin{claim}
  Let $\mathbb{S}^1\to E\to B$ be an oriented $\mathbb{S}^1$-bundle such that the base  $B$ is reliable and the action of $\pi_1B$ on $\pi_2B$ is almost trivial. 
 Then $E$ is reliable.
