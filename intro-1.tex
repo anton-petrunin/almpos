@@ -13,9 +13,9 @@ pdfauthor={Vitali Kapovitch, Anton Petrunin and Wilderich Tuschmann}
 ]{hyperref}
 
 \begin{document}
-\title[On torsion in center conjecture]{On torsion in center conjecture\\
-(An appendix for ``Nilpotency, almost\\
-nonnegative curvature, and gradient flow'')}
+\title[The torsion in the center conjecture]{On the\\ torsion in the center\\ conjecture} %\\
+%(An appendix for ``Nilpotency, almost\\
+%nonnegative curvature, and gradient flow'')}%
 \thanks{\it 2000 AMS Mathematics Subject Classification:\rm\
 53C20. Keywords: nonnegative curvature, nilpotent}\rm
 \author{Vitali Kapovitch}
@@ -27,29 +27,28 @@ University Park, State College, PA 16802, USA.
 \author{Wilderich Tuschmann}\address{Wilderich Tuschmann
 \\Arbeitsgruppe Differentialgeometrie
 \\Institut f\"ur Algebra und Geometrie
-\\Fakult\"at f\"ur Mathematik
+\\Fakult\"at f\"ir Mathematik
 \\Karlsruher Institut f\"ur Technologie
 \\Englerstr. 2
 \\D-76131 Karlsruhe, Deutschland.}\email{tuschmann@kit.edu}
 
 \maketitle
 \begin{abstract}
-We give a condition for towers of fiber bundles which implies that the fundamental group of its total space has a nilpontent subgroup of finite index such that its torsion lies in its center.
-Moreover the index of the subgroup can be bounded in terms of the fibers of the tower.
+We present a condition for towers of fiber bundles which implies that the fundamental group of 
+the total space has a nilpotent subgroup of finite index whose torsion is contained in its center.
+Moreover, the index of the subgroup can be bounded in terms of the fibers of the tower.
 
-The theorem is motivated by a conjecture that
-any almost nonnegatively curved $m$-dimesional manifold $M$ 
-admits a finite cover $\tilde M$ with number of folds bounded in terms of $m$
+Our result is motivated by the conjecture that
+every almost nonnegatively curved closed smooth $m$-dimensional manifold $M$ 
+admits a finite cover $\tilde M$ for which the number of leafs is bounded in terms of $m$
 such that the torsion of the fundamental group $\pi_1 \tilde M$ lies in its center.
 \end{abstract}
 
 
 \section{Introduction}
 
-In this paper we prove the following topological result  motivated by Conjecture~\ref{con:tor} below.
-Our proof  is surprisingly complicated.
-We would be very interested in finding an easier proof;
-among other reasons because it might be generalizable to proving the conjecture.
+\noindent 
+We prove the following topological result, which is motivated by Conjecture~\ref{con:tor} below.
 
 \begin{thm}\label{thm:smooth}
 Let $F_1,F_2,\dots,F_n$ be an array of closed manifolds 
@@ -59,43 +58,52 @@ $$E=E_n\buildrel {F_n}\over \longrightarrow E_{n-1}\buildrel {F_{n-1}}\over\long
 and each of the bundles $E_k\buildrel {F_k}\over \longrightarrow E_{k-1}$ is homotopically trivial over the $1$-skeleton. 
 Then the fundamental group $\pi_1E$ contains a nilpotent subgroup $\Gamma$ such that
 $$[\pi_1E:\Gamma]\le \mathrm{Const}(F_1,F_2,\dots,F_n)\quad\text{and}\quad\mathrm{Tor}(\Gamma)\subset \mathrm{Z}(\Gamma),$$
-where $\mathrm{Tor}(\Gamma)$ and $\mathrm{Z}(\Gamma)$ denote the torsion and the center of $\Gamma$ correspondingly.
+where $\mathrm{Tor}(\Gamma)$ and $\mathrm{Z}(\Gamma)$ denote the torsion and the center of $\Gamma$, respectively.
 %I changed $N$ to $\Gamma$ because later $N$ is used to denote a manifold.
 \end{thm}
 
+Our proof is  actually surprisingly involved and 
+we would be very much interested in any simpler one which,
+in particular, might help to establish the conjecture in  full generality.
+
 \section{Motivation}
 
-\subsection{} The theorem is motivated by the following conjecture form \cite{KPT}.
+\subsection{} Theorem 1 is motivated by the following conjecture from \cite{KPT}.
 
 \begin{mconj}\label{con:tor}
-There is $C=C(m)$ such that if $M^m$ is almost nonnegatively curved then there is a nilpotent subgroup $N\subset \pi_1M$ of index  at most $C$ whose torsion is contained in its center.
+For all dimensions $m$ there is a constant $C=C(m)$ such that if $M^m$ is an almost nonnegatively curved 
+closed smooth $m$-manifold, then there is a nilpotent subgroup $N\subset \pi_1M$ of index  at most $C$ whose torsion is contained in its center.
 \end{mconj}
 
 The following earlier conjecture of Fukaya and Yamaguchi \cite{FY} is closely related.
 
 \begin{conj}[Fukaya--Yamaguchi]\label{con:c-ab}
-The fundamental group of a nonnegatively curved  $m$-manifold is $C(m)$-abelian;
-that is, there is $C=C(m)$ such that if $M^m$ is nonnegatively curved then there is abelian subgroup $A\subset \pi_1M$ of index  at most~$C$.
+The fundamental group of a nonnegatively curved  $m$-manifold $M$ is $C(m)-$abelian: 
+there is $C=C(m)$ such that if $M^m$ is nonnegatively curved, then there is an 
+abelian subgroup $A\subset \pi_1M$ of index  at most~$C$.
 \end{conj}
 
 Let us show that our main conjecture (if true) implies Conjecture \ref{con:c-ab}.
 
-If the fundamental group of $M$ is finite (in particular if $M$ is positively curved) then whole group is torsion.
+If the fundamental group of $M$ is finite (in particular if $M$ is positively curved), then whole group is torsion.
 In this case Conjecture~\ref{con:tor} and Theorem B in \cite{KPT} imply Conjecture~\ref{con:c-ab}.
-The general case is more tricky;
-the following argument (cf. \cite[Corollary 4.6.1]{KPT}) was suggested to us by Burkhard Wilking.
+The general case is more tricky, and
+the following argument (cf. \cite[Corollary 4.6.1]{KPT}) to prove it 
+was suggested to us by Burkhard Wilking.
 
 If $\sec(M^m)\ge0$, then the universal cover $\tilde M$ of $M$ is isometric to the product $\mathbb{R}^n\times K$, where $K$ is a compact Riemannian manifold and the $\pi_1M$ action  on $\mathbb{R}^n\times K$ is diagonal~\cite{CG72}.
 It follows from \cite[Cor. 6.3]{wilking} that one can deform the metric on $M$ so that its universal cover is still isometric to $\mathbb{R}^n\times K$ and the induced action on $K$ is finite. Let $\Gamma_1$ be the image of $\pi_1M$ in 
-$\Iso(\R^n)$ and $\Gamma_2$ be the image in $\Iso(K)$. By above we can assume that $\Gamma_2$ is finite. Therefore $\Gamma_1$ is crystallographic. By the third Bieberbach theorem it contains a subgroup of index $\le C(n)$ consisting entirely of translations (and hence abelian).
+$\Iso(\R^n)$ and $\Gamma_2$ be the image in $\Iso(K)$. By the above we can assume that $\Gamma_2$ is finite. Therefore $\Gamma_1$ is a crystallographic group. By the third Bieberbach theorem, 
+it contains a subgroup of index $\le C(n)$ consisting entirely of translations (and hence is abelian).
 Consider the action of $\Gamma_2$ on the frame bundle $F$ of $K$. This action is free and by Cheeger's trick, $F$ admits a sequence of almost nonnegatively curved metrics~\cite{FY}. Since $\Gamma_2$ is finite, by Conjecture~\ref{con:tor} it contains 
-an abelian subgroup of index $\le C(m)$. Thus, both $\Gamma_1$ and $\Gamma_2$ are $C(m)$-abelian which  yields Conjecture~\ref{con:c-ab}.
+an abelian subgroup of index $\le C(m)$. Thus, both $\Gamma_1$ and $\Gamma_2$ are $C(m)-$abelian,
+and this yields Conjecture~\ref{con:c-ab}.
 
-\subsection{} Next, let us explain  how Theorem~\ref{thm:smooth} is related to Conjecture~\ref{con:tor}.
+\subsection{} Let us next explain  how Theorem~\ref{thm:smooth} is related to Conjecture~\ref{con:tor}.
 
-Almost nonnegatively curved manifold can be defined as a closed manifold $M$ which admits a sequence of metrics $g_n$ with a universal lower curvature bound which converges to a point in the sense of Gromov--Hausdorff.
+An almost nonnegatively curved manifold can be defined as a closed smooth manifold $M$ which admits a sequence of metrics $g_n$ with a uniform lower curvature bound w.r.t. which it converges to a point in Gromov--Hausdorff topology.
 
-An approach to studying almost nonnegatively curved manifolds is by studying successive blow-ups of the collapsing sequence $M_n=(M,g_n)$ as done in \cite[Section 4.3]{KPT}.
+One approach to studying almost nonnegatively curved manifolds is by studying successive blow-ups of the collapsing sequence $M_n=(M,g_n)$, as was done in \cite[Section 4.3]{KPT}.
 Let us describe this construction.
 
 The sequence $\{M_n\}$ converges to a point; this one-point space will be denoted by $A_0$.
@@ -126,14 +134,16 @@ As before, $A_2$ is a compact nonnegatively curved Alexandrov space with diamete
 Set $k_2:=k_1+\dim A_2$.
 If one now chooses a marked point in $M_{n,2}$,
 then, as $n\to\infty$,
-$$\frac{1}{\vartheta_{n,2}}{\cdot} M_{n}$$ pointed converges to $A_2\times\mathbb{R}^{k_1}$,
+$$\frac{1}{\vartheta_{n,2}}{\cdot} M_{n}$$ converges 
+in the pointed Gromov--Hausdorff topology.
+to $A_2\times\mathbb{R}^{k_1}$,
 which is of dimension $k_2$.
 
 We repeat this procedure until, at some step, $k_\ell=m$ where $m=\dim M$.
 
 \medskip
 
-As a result we obtain a sequence $\{A_i\}$ of compact nonnegatively curved Alexandrov spaces
+As a result, we obtain a sequence $\{A_i\}$ of compact nonnegatively curved Alexandrov spaces
 with diameter $1$ that satisfies
 $$\dim A_i=k_i-k_{i-1} 
 \quad\text{ and therefore }\quad
@@ -145,26 +155,28 @@ $$\{p_n\}=M_{n,\ell}\subset \cdots \subset M_{n,2}\subset M_{n,1}=M_n,$$
 
 Now let us assume that \emph{for all choices of $\bar p_i$}
 the Alexandrov spaces $A_1,\dots, A_\ell$ are closed  Riemannian manifolds.
-It will be called \emph{rescaled smoothness assumption}.
+This condition will be called the \emph{rescaled smoothness assumption}.
 
-This assumption definitely \emph{need not} hold in general;
-it is made only to simplify the problem.
-Mainly, it makes it possible to apply the following fibration theorem of Yamaguchi~\cite{Yam} to the successive blow-ups of the collapsing sequence under consideration.
+Notice tbat his assumption definitely \emph{does not need to hold} in general;
+it is only made to simplify the problem.
+Foremost, it makes it possible to apply the following fibration theorem of Yamaguchi~\cite{Yam} to the successive blow-ups of the collapsing sequence under consideration.
 
 \begin{thm}[Yamaguchi's Fibration Theorem]
-Let $M_n$ be a sequence of $m$-dimensional Riemannian manifolds with sectional curvatue at least $k$ and the diameters at most $D$, which converges to a Riemannian manifold $N$ in the sense of Gromov--Hausdorff.
+Let $M_n$ be a sequence of $m$-dimensional Riemannian manifolds with sectional curvatue at least $k$ 
+and diameters at most $D$, which converges to a Riemannian manifold $N$ in the Gromov--Hausdorff sense.
 Then for all large $n$ there exists an almost Riemannian submersion $f_n\co M_n\to N$.
 In particular, $f_n$ is a fiber bundle.
 \end{thm}
 
-If $M_n$ as above satisfies the rescaled smoothness assumption.
+ILet $M_n$ as above satisfies the rescaled smoothness assumption.
 Then it should be true that after passing to a subsequence of $M_n$,
 each $M_n$ is homeomorphic to the total space of a tower of fiber bundles
 \[
 M_n=E_\ell\buildrel {A_\ell}\over \longrightarrow E_{n-1}\buildrel {A_{\ell-1}}\over\longrightarrow\dots\buildrel {A_1}\over\longrightarrow E_0=\{pt\}.
 \]
 Moreover, by using the Lipschitz properties of the gradient flow,
-it should be possible to pass to a finite cover of the total space with number of folds controlled by topology of $A_i$, so that the tower of bundles can be
+it should be possible to pass to a finite cover of the total space with number of leafs 
+controlled by the topology of $A_i$, so that the tower of bundles can be
 further refined  to a tower of the form
 \[
 E=E_n\buildrel {F_n}\over \longrightarrow E_{n-1}\buildrel {F_{n-1}}\over\longrightarrow\dots\buildrel {F_1}\over\longrightarrow E_0=\{pt\}
@@ -175,16 +187,18 @@ such that
 \item Each of the bundles $E_k\buildrel {F_k}\over \longrightarrow E_{k-1}$ is homotopically trivial over the $1$-skeleton. 
 \end{enumerate}
 
-This finally leads us to the main topological result of this paper (Theorem \ref{thm:smooth} above) which says that if such tower of bundles exists then its total space satisfies the conclusion of Conjecture~\ref{con:tor}.
+This finally leads us to the main topological result of this paper (Theorem \ref{thm:smooth} above),
+which says that if such a tower of bundles exists, then its total space satisfies the conclusion of Conjecture~\ref{con:tor}.
 
-We have not worked out the details of the reduction as we do not see a geometric condition which would imply the rescaled smoothness assumption.
-In fact it might  be possible to do the reduction even in the case if all $A_i$ are general  Alexandrov spaces  \emph{without  boundary} but we have no idea what to do if at least one of them has nonempty boundary.
+We have, however, not worked out the details of the reduction, 
+as we do not see a geometric condition which would imply the rescaled smoothness assumption.
+In fact, it might  well be possible to do the reduction even in the case if all $A_i$ are general  Alexandrov spaces  \emph{without  boundary}, but we have no idea what to do if at least one of them has nonempty boundary.
 
 
 \section{Proof of the theorem}
 
 \subsection{}
-In the proof of Theorem~\ref{thm:smooth} we use the following result proved by Dror,  Dwyer and Kan in \cite{DDK}.
+The proof of Theorem~\ref{thm:smooth} uses the following result of Dror,  Dwyer and Kan (\cite{DDK}).
 
 \input{appendix.tex}
 

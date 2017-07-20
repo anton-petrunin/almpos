@@ -1,21 +1,22 @@
 
 
 \begin{thm}\label{thm:DDK}
-Let $F$ be a finite simply connected CW-complex and 
+Let $F$ be a finite simply connected CW complex and 
 $Aut_0(F)$ be the identity component  of the 
-space of all homotopy equivalences $F\to F$. Then $Aut_0(F)$ is homotopy equivalent to a CW-complex with finite number of cells in each dimension.
+space of all homotopy equivalences $F\to F$. Then $Aut_0(F)$ is homotopy equivalent to a CW complex with a 
+finite number of cells in each dimension.
 \end{thm}
 
 Let $\star=\id_F$ be the base point of $\Aut_0(F)$.
 
-Further, we consider $\mathbb{S}^1$ as the unit circle in the complex plane, so  $z\mapsto z^n$ defines a map $\mathbb{S}^1\to \mathbb{S}^1$ of degree $n$.
+Furthermore, we consider $\mathbb{S}^1$ as the unit circle in the complex plane, so  that $z\mapsto z^n$ defines a map $\mathbb{S}^1\to \mathbb{S}^1$ of degree $n$.
 
 \begin{cor}\label{cor:DDK}
 
-Given a finite simply connected CW-complex $F$, there is a natural number $n=n(F)$ such that the following  holds.
+Given a finite simply connected CW complex $F$, there is a natural number $n=n(F)$ such that the following  holds.
 
-Assume
-$\{\kappa_z\colon F\to F: z\in \mathbb{S}^1\}$ is a one parameter of homotopy equivalences with $\kappa_1=\id_F$
+Assume that 
+$\{\kappa_z\colon F\to F: z\in \mathbb{S}^1\}$ is a one parameter family of homotopy equivalences with $\kappa_1=\id_F$
 such that for some $N\in\mathbb{N}$ the family $\kappa^N_z=\kappa_{z^N}$ is homotopic to the constant family $\mathrm{id}_F$. 
 Then $\kappa^n_z$ is homotopic to the constant family $\mathrm{id}_F$.
 
@@ -23,7 +24,7 @@ Then $\kappa^n_z$ is homotopic to the constant family $\mathrm{id}_F$.
 
 \begin{proof}[Proof.]
 We can view $\kappa$ as a loop in $\Aut_0(F)$ based at $\star$.
-Since $\Aut_0(F)$ is an $H$-space it's fundamental group  
+Since $\Aut_0(F)$ is an $H$-space, its fundamental group  
 $\pi_1(E_0(F))$ is abelian. 
 
 By Theorem~\ref{thm:DDK}, $\pi_1(\Aut_0(F))$ is finitely generated,
@@ -31,18 +32,18 @@ therefore $\Tor[\pi_1(\Aut_0(F))]$ is finite.
 Hence the corollary follows.
 \end{proof}
 
-Further we denote by $\DD$ the closed unit disc in the complex plane.
+We denote by $\DD$ the closed unit disc in the complex plane.
 
 \begin{techlem}\label{techlem}
-Let $F$ be a compact simply connected manifold,
-$h\colon \DD\z\times F\z\to F$ be 
+Let $F$ be a compact simply connected manifold and
+$h\colon \DD\z\times F\z\to F$ be  a
 $\DD$-family of homotopy equivalences $F\to F$ such that $h(u,*)=\mathrm{id}_F$ for any
 $u\in\partial \DD$. 
 Consider the map $\beta_x\colon \DD\to F$ defined by $\beta_x\colon u\mapsto h(u,x)$ for a fixed point $x\in F$. 
 Then $[\beta_x]\in \mathrm{Tor}(\pi_2F)$ and is independent of $x$.
 
 Moreover, given a map $f\colon \DD\to F$ let $f_h\co \DD\to F$ be given by $f_h(u)=h(u,f(u))$.
-Note that  $f_h|_{\partial \DD}=f|_{\partial \DD}$. In particular we can view $[f_h]-[f]$ as an element of $\pi_2F$.
+Note that  $f_h|_{\partial \DD}=f|_{\partial \DD}$. In particular, we can view $[f_h]-[f]$ as an element of $\pi_2F$.
 
 Then 
 $[f_h]-[f]=[\beta_x]\in \mathrm{Tor}(\pi_2F)$. 
@@ -58,7 +59,7 @@ We'll denote the resulting map $H^{*+2}(F)\to H^*(F)$ by $D_h$. It's easy to see
 %Then it the correspondent derivation 
 %$$D_h\colon H^{k+2}(F)\to H^{k}(F)$$
  %has nontrivial element in the second cohomology; that is,
- We claim that  $D_h^\QQ$ vanishes on $H^2(F,\QQ)$. Suppose not and 
+ We claim that  $D_h^\QQ$ vanishes on $H^2(F,\QQ)$. Suppose not and and that
   for some 
 $\theta\in H^2(F,\QQ)$ we have $H^0(F,\QQ)\ni D_h^\QQ\theta\not=0$. 
 Note that \[D_h^\QQ\theta^k=k{\cdot} \theta^{k-1}{\cdot} D_h^\QQ\theta.\] 
@@ -71,19 +72,19 @@ Therefore
 \quad
 \Longrightarrow
 \quad[\theta^{k}]\ne0.\]
-Therefore $[\theta^{k}]\not=0$ for any positive integer $k$.
+Thus,  $[\theta^{k}]\not=0$ for any positive integer $k$.
 In particular, $F$ has infinite dimension, a contradiction. 
 Thus, $D^\QQ_h|_{H^2(F,\QQ)}\equiv 0$. Hence, $D_h|_{H^2(F)}\equiv 0$ and therefore $h^*=pr_2^*$ on $H^2(F)$ where $pr_2\colon \mathbb{S}^2\times F\to F$ is the second coordinate projection. 
 This  easily implies the statement of the Lemma.
 \end{proof}
 \begin{rmk}
-Since $[\beta_x] \in \pi_2F$ is independent of the choice of $x$ we can drop the subindex $x$ and simply denote this element by $[\beta]$.
+Since $[\beta_x] \in \pi_2F$ is independent of the choice of $x$, we can drop the subindex $x$ and simply denote this element by $[\beta]$.
 \end{rmk} 
 
 \subsection{}
 
 \begin{claim}
-Let $\mathbb{S}^1\to E\to B$ be an oriented $\mathbb{S}^1$-bundle over a compat manifold $B$.
+Let $\mathbb{S}^1\to E\to B$ be an oriented $\mathbb{S}^1$-bundle over a compact manifold $B$.
 Assume that the action of $\pi_1B$ 
 on $\pi_2B$ is trivial. 
 Then  the action of $\pi_1E$ on $\pi_2E$ is trivial.
@@ -94,7 +95,7 @@ Let $\gamma\in \pi_1(E,p)$ and $\alpha\in \pi_2(E,p)$.
 Let us denote by $\bar\gamma\in \pi_1(B,\bar p)$ and 
 $\bar\alpha\in \pi_2(B,\bar p)$ their projection to $B$.
 
-By assumptions, $\bar\alpha^{\bar\gamma}=\bar\alpha$, or equivalently, there is a  map
+By our assumptions, $\bar\alpha^{\bar\gamma}=\bar\alpha$, or equivalently, there is a  map
 $h\colon \mathbb{S}^2\times \mathbb{S}^1\to B$ such that 
 $$h(u,v)=\bar p,\quad
 h(u,*)\sim\bar\gamma\quad\text{ and}\quad
@@ -107,8 +108,8 @@ for any element in $\gamma\in \pi_1E'$.
 
 \begin{claim}
 Let $F\xrightarrow{i} E\to B$ be a fiber bundle with 
-simply connected fiber $F$ over a compat manifold $B$, 
-which admits a trivialization on the $1$-skeleton of $B$. 
+simply connected fiber $F$ over a compact manifold $B$, 
+which admits a trivialization over the $1$-skeleton of $B$. 
 Assume $\pi_1B$ is almost nilpotent 
 and the action of $\pi_1B$ on $\pi_2B$ is almost trivial. 
 Then  the action of $\pi_1E$ on $\pi_2E$ is almost trivial.
@@ -142,7 +143,7 @@ Consider a map $m\colon \DD\to \mathbb{S}^2$ such that
 Fix a trivialization 
 $F\times \DD$ of the induced bundle. 
 Let 
-$m'\colon F\times \DD\to E''$ be correspondent mapping. 
+$m'\colon F\times \DD\to E''$ be the correspondent mapping. 
 By construction $m'(*,x)$ is a homeomorphism  between $F\times x$ and the fiber $F_{m(x)}$.
 Then the map $f\colon E''\to E''$ is completely described by the map 
 $$f'\colon F\times \DD\to F\times \DD $$ 
@@ -331,7 +332,8 @@ Let us summarize what we have:
 \end{enumerate}
 
 
-We can assume  that the bundle over $\DD\times \mathbb{S}^1$ is smooth and both of the above trivializations are smooth. 
+We can assume  that the bundle over $\DD\times \mathbb{S}^1$ is smooth and that
+ both of the above trivializations are smooth. 
 Consider the vector field $\bar V=\frac {\partial }{\partial t}$ on $\DD\times \mathbb{S}^1$;
 here $t$ is the $\mathbb{S}^1$-coordinate and we assume $\mathbb{S}^1=\mathbb{R}/\mathbb{Z}$.
 
@@ -361,12 +363,12 @@ This means that we can apply Technical Lemma (\ref{techlem}) to $\hat h$.
 
 Consider a horizontal section of $E'$ over $\partial \DD\times \mathbb{S}^1$ with respect to ~\eqref{triv2}. 
 Fix $w\in \mathbb{S}^1$. 
-This gives a horizontal with respect to ~\eqref{triv2} section over $\partial \DD\times w$.
+This gives a with respect to ~\eqref{triv2} horizontal section over $\partial \DD\times w$.
 Since 
  $F$ is simply connected this section can be extended to a section over $\DD\times w$ which in trivialization~\eqref{triv1} has the form $u\mapsto (u, w, f(u))$ for some map $f\co \DD\to F$.
 As in Technical Lemma (\ref{techlem}) set  $f_{\hat h}(u)= \hat h(u,f(u))$.
 
-Then by Technical Lemma (\ref{techlem})
+Then , by Technical Lemma (\ref{techlem})
 \begin{equation}
 \label{eq:in-Tor}
 [f_{\hat h}]-[f]=[\beta]\in \mathrm{Tor}(\pi_2F)
