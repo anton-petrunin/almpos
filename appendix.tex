@@ -1,3 +1,211 @@
+\documentclass{amsart}
+\usepackage{appendix}
+\usepackage[colorlinks=true,
+citecolor=black,
+linkcolor=black,
+anchorcolor=black,
+filecolor=black,
+menucolor=black,
+urlcolor=black,
+pdftitle={On the torsion in the center conjecture},
+pdfsubject={Algebraic topology},
+pdfauthor={Vitali Kapovitch, Anton Petrunin and Wilderich Tuschmann}
+]{hyperref}
+
+\begin{document}
+\title[On the torsion in the center conjecture]{On the\\ torsion in the center\\ conjecture} %\\
+%(An appendix for ``Nilpotency, almost\\
+%nonnegative curvature, and gradient flow'')}%
+\thanks{\it 2000 AMS Mathematics Subject Classification:\rm\
+53C20. Keywords: nonnegative curvature, nilpotent}\rm
+\author{Vitali Kapovitch}
+\address{Vitali Kapovitch\\Department of Mathematics\\University of Toronto\\
+Toronto, Ontario, M5S 2E4, Canada.}\email{vtk@math.toronto.edu}
+\author{Anton Petrunin }\address{Anton Petrunin\\ Department of Mathematics\\ Pennsylvania State University\\
+University Park, State College, PA 16802, USA.
+}\email{petrunin@math.psu.edu}
+\author{Wilderich Tuschmann}\address{Wilderich Tuschmann
+\\Arbeitsgruppe Differentialgeometrie
+\\Institut f\"ur Algebra und Geometrie
+\\Fakult\"at f\"ur Mathematik
+\\Karlsruher Institut f\"ur Technologie
+\\Englerstr. 2
+\\D-76131 Karlsruhe, Deutschland.}\email{tuschmann@kit.edu}
+
+\begin{abstract}
+We present a condition for towers of fiber bundles which implies that the fundamental group of 
+the total space has a nilpotent subgroup of finite index whose torsion is contained in its center.
+Moreover, the index of the subgroup can be bounded in terms of the fibers of the tower.
+
+Our result is motivated by the conjecture that
+every almost nonnegatively curved closed $m$-dimensional manifold $M$ 
+admits a finite cover $\tilde M$ for which the number of leafs is bounded in terms of $m$
+such that the torsion of the fundamental group $\pi_1 \tilde M$ lies in its center.
+\end{abstract}
+
+\maketitle
+
+
+
+\section*{Introduction}
+
+\subsection{}
+We prove the following topological result, which is motivated by Conjecture~\ref{con:tor} below.
+
+
+\begin{thm}\label{thm:smooth}
+Let $F_1,F_2,\dots,F_n$ be an array of closed manifolds 
+such that each $F_i$ is either $\mathbb{S}^{1}$ or is simply connected. 
+Assume $E$ is the total space of a tower of fiber bundles over a point
+$$E=E_n\buildrel {F_n}\over \longrightarrow E_{n-1}\buildrel {F_{n-1}}\over\longrightarrow\dots\buildrel {F_1}\over\longrightarrow E_0=\{pt\}$$
+and each of the bundles $E_k\buildrel {F_k}\over \longrightarrow E_{k-1}$ is homotopically trivial over the $1$-skeleton. 
+Then the fundamental group $\pi_1E$ contains a nilpotent subgroup $\Gamma$ such that
+$$[\pi_1E:\Gamma]\le \mathrm{Const}(F_1,F_2,\dots,F_n)\quad\text{and}\quad\mathrm{Tor}(\Gamma)\subset \mathrm{Z}(\Gamma),$$
+where $\mathrm{Tor}(\Gamma)$ and $\mathrm{Z}(\Gamma)$ denote the torsion and the center of $\Gamma$, respectively.
+%I changed $N$ to $\Gamma$ because later $N$ is used to denote a manifold.
+\end{thm}
+
+Our proof is surprisingly involved. 
+We would be very much interested to see a proof based on a different idea;
+in particular, it might help to establish the conjecture in  full generality.
+
+\section*{Motivation}
+
+\subsection{Conjectures} Theorem 1 is motivated by the following conjecture from \cite{KPT}.
+
+\begin{mconj}\label{con:tor}
+For all dimensions $m$ there is a constant $C=C(m)$ such that if $M^m$ is an almost nonnegatively curved 
+closed smooth $m$-manifold, then there is a nilpotent subgroup $N\subset \pi_1M$ of index  at most $C$ whose torsion is contained in its center.
+\end{mconj}
+
+The following earlier conjecture of Fukaya and Yamaguchi \cite{FY} is closely related.
+
+\begin{conj}[Fukaya--Yamaguchi]\label{con:c-ab}
+The fundamental group of a nonnegatively curved  $m$-manifold $M$ is $C(m)$-abelian: 
+there is $C=C(m)$ such that if $M^m$ is nonnegatively curved, then there is an 
+abelian subgroup $A\subset \pi_1M$ of index  at most~$C$.
+\end{conj}
+
+Let us show that our main conjecture (if true) implies Conjecture \ref{con:c-ab}.
+
+If the fundamental group of $M$ is finite (in particular if $M$ is positively curved), then the whole group is torsion.
+In this case Conjecture~\ref{con:tor} and Theorem B in \cite{KPT} imply Conjecture~\ref{con:c-ab}.
+The general case is more tricky.
+The following argument
+was suggested to us by Burkhard Wilking (compare to \cite[Corollary 4.6.1]{KPT}).
+
+If $\sec(M^m)\ge0$, then the universal cover $\tilde M$ of $M$ is isometric to the product $\mathbb{R}^n\times K$, where $K$ is a compact Riemannian manifold and the $\pi_1M$ action  on $\mathbb{R}^n\times K$ is diagonal~\cite{CG72}.
+It follows from \cite[Cor. 6.3]{wilking} that one can deform the metric on $M$ so that its universal cover is still isometric to $\mathbb{R}^n\times K$ and the induced action on $K$ is finite.
+Let $\Gamma_1$ be the image of $\pi_1M$ in $\Iso(\R^n)$ and $\Gamma_2$ be the image in $\Iso(K)$. By the above we can assume that $\Gamma_2$ is finite.
+Therefore $\Gamma_1$ is a crystallographic group.
+By the third Bieberbach theorem, it contains a subgroup of index $\le C(n)$ consisting entirely of translations (and hence is abelian).
+Consider the action of $\Gamma_2$ on the frame bundle $F$ of $K$.
+This action is free and by Cheeger's trick, $F$ admits a sequence of almost nonnegatively curved metrics~\cite{FY}. 
+Since $\Gamma_2$ is finite, by Conjecture~\ref{con:tor} it contains 
+an abelian subgroup of index $\le C(m)$. 
+Thus, both $\Gamma_1$ and $\Gamma_2$ are $C(m)$-abelian,
+and this yields Conjecture~\ref{con:c-ab}.
+
+\subsection{About the reduction.} Let us explain  how Theorem~\ref{thm:smooth} is related to Conjecture~\ref{con:tor}.
+
+An almost nonnegatively curved manifold can be defined as a closed smooth manifold $M$ which admits a sequence of metrics $g_n$ with a uniform lower curvature bound such that the sequence $M_n$ converges to a point in Gromov--Hausdorff topology.
+
+One approach to studying almost nonnegatively curved manifolds is by studying successive blow-ups of the collapsing sequence $M_n=(M,g_n)$, as was done in \cite[Section 4.3]{KPT}.
+Let us describe this construction.
+
+The sequence $\{M_n\}$ converges to a point; this one-point space will be denoted by $A_0$.
+
+Set $M_{n,1}:=M_n$ and $\vartheta_{n,1}:=\diam M_{n,1}$.
+Rescale now $M_{n,1}$ by $\tfrac{1}{\vartheta_{n,1}}$
+so that 
+\[\diam(\tfrac{1}{\vartheta_{n,1}}\cdot M_{n,1})=1.\]
+Passing to a subsequence if necessary, one has
+that the manifolds $\frac{1}{\vartheta_{n,1}}{\cdot} M_{n,1}$
+converge to $A_1$,
+where $A_1$
+is a compact nonnegatively curved Alexandrov space with diameter $1$.
+
+Now choose a regular point $\bar p_1\in A_1$,
+and consider distance coordinates around $\bar p_1\in U_1\to \mathbb{R}^{k_1}$,
+where $k_1$ is the dimension of $A_1$.
+The distance functions can be lifted
+to $U_{n,1}\subset \frac{1}{\vartheta_{n,1}}{\cdot} M_{n,1}$.
+Denote by $M_{n,2}$ the level set of $U_{n,1}\to \mathbb{R}^{k_1}$ that corresponds to $\bar p_1$.
+Clearly, $M_{n,2}$ is a compact submanifold of codimension $k_1$.
+Set $\vartheta_{n,2}:=\diam M_{n,2}$.
+Passing again to a subsequence, one has
+that the sequence $\frac{1}{\vartheta_{n,2}}{\cdot} M_{n,2}$
+converges to some  Alexandrov space $A_2$.
+
+As before, $A_2$ is a compact nonnegatively curved Alexandrov space with diameter 1.
+Set $k_2:=k_1+\dim A_2$.
+If one now chooses a marked point in $M_{n,2}$,
+then, as $n\to\infty$,
+$$\frac{1}{\vartheta_{n,2}}{\cdot} M_{n}$$ converges 
+in the pointed Gromov--Hausdorff topology
+to $A_2\times\mathbb{R}^{k_1}$,
+which is of dimension $k_2$.
+
+We repeat this procedure until, at some step, $k_\ell=m$ where $m=\dim M$.
+
+\medskip
+
+As a result, we obtain a sequence $\{A_i\}$ of compact nonnegatively curved Alexandrov spaces
+with diameter $1$ that satisfies
+$$\dim A_i=k_i-k_{i-1} 
+\quad\text{ and therefore }\quad
+\sum_{i=1}^\ell\dim A_i=m.$$
+We also obtain
+a sequence of rescaling factors $\vartheta_{n,i}=\diam M_{n,i}$,
+and  a nested sequence of submanifolds
+$$\{p_n\}=M_{n,\ell}\subset \cdots \subset M_{n,2}\subset M_{n,1}=M_n,$$
+
+Now let us assume that \emph{for all choices of $\bar p_i$}
+the Alexandrov spaces $A_1,\dots, A_\ell$ are closed  Riemannian manifolds.
+This condition will be called the \emph{rescaled smoothness assumption}.
+
+Notice tbat his assumption definitely \emph{does not need to hold} in general;
+it is only made to simplify the problem.
+Foremost, it makes it possible to apply the following fibration theorem of Yamaguchi~\cite{Yam} to the successive blow-ups of the collapsing sequence under consideration.
+
+\begin{thm}[Yamaguchi's Fibration Theorem]
+Let $M_n$ be a sequence of $m$-dimensional Riemannian manifolds with sectional curvatue at least $k$ 
+and diameters at most $D$, which converges to a Riemannian manifold $N$ in the Gromov--Hausdorff sense.
+Then for all large $n$ there exists an almost Riemannian submersion $f_n\co M_n\to N$.
+In particular, $f_n$ is a fiber bundle.
+\end{thm}
+
+Let $M_n$ as above satisfies the rescaled smoothness assumption.
+Then it should be true that after passing to a subsequence of $M_n$,
+each $M_n$ is homeomorphic to the total space of a tower of fiber bundles
+\[
+M_n=E_\ell\buildrel {A_\ell}\over \longrightarrow E_{n-1}\buildrel {A_{\ell-1}}\over\longrightarrow\dots\buildrel {A_1}\over\longrightarrow E_0=\{pt\}.
+\]
+Moreover, by using the Lipschitz properties of the gradient flow,
+it should be possible to pass to a finite cover of the total space with number of leafs 
+controlled by the topology of $A_i$, so that the tower of bundles can be
+further refined  to a tower of the form
+\[
+E=E_n\buildrel {F_n}\over \longrightarrow E_{n-1}\buildrel {F_{n-1}}\over\longrightarrow\dots\buildrel {F_1}\over\longrightarrow E_0=\{pt\}
+\]
+such that
+\begin{enumerate}[(i)]
+\item Each $F_i$ is either $\mathbb{S}^{1}$ or is simply connected. 
+\item Each of the bundles $E_k\buildrel {F_k}\over \longrightarrow E_{k-1}$ is homotopically trivial over the $1$-skeleton. 
+\end{enumerate}
+
+This finally leads us to the main topological result of this paper (Theorem \ref{thm:smooth} above),
+which says that if such a tower of bundles exists, then its total space satisfies the conclusion of Conjecture~\ref{con:tor}.
+
+We have, however, not worked out the details of the reduction, 
+as we do not see a geometric condition which would imply the rescaled smoothness assumption.
+In fact, it might  well be possible to do the reduction even in the case if all $A_i$ are general  Alexandrov spaces  \emph{without  boundary}, but we have no idea what to do if at least one of them has nonempty boundary.
+
+
+\section*{Proof of the theorem}
+
+\subsection{Technical tools}
+The proof of Theorem~\ref{thm:smooth} uses the following result of Dror,  Dwyer and Kan (\cite{DDK}).
 
 
 \begin{thm}\label{thm:DDK}
@@ -53,7 +261,8 @@ $[f_h]-[f]=[\beta_x]\in \mathrm{Tor}(\pi_2F)$.
 
 The map $h$ induces a map $\mathbb{S}^2\times F\to F$ which with a  slight abuse of notation we'll still denote by $h$. 
 Consider the induced map on cohomology
-\[H^{*+2}(F)\overset{h^*}{\longrightarrow} H^{*+2}(\mathbb{S}^2\times F)\to H^*(F)\otimes H^2(\mathbb{S}^2)\cong  H^*(F)\] where the second map is the projection coming from the K\"unneth isomorphism.
+\[H^{*+2}(F)\overset{h^*}{\longrightarrow} H^{*+2}(\mathbb{S}^2\times F)\to H^*(F)\otimes H^2(\mathbb{S}^2)\cong  H^*(F),\]
+where the second map is the projection coming from the K\"unneth isomorphism.
 We'll denote the resulting map $H^{*+2}(F)\to H^*(F)$ by $D_h$. It's easy to see that it's an algebra derivation on $H^*(F)$. The same obviously holds true for $D_h^\QQ\colon H^{*+2}(F,\QQ)\to H^*(F,\QQ)$
 
 %Then it the correspondent derivation 
@@ -81,7 +290,7 @@ This  easily implies the statement of the Lemma.
 Since $[\beta_x] \in \pi_2F$ is independent of the choice of $x$, we can drop the subindex $x$ and simply denote this element by $[\beta]$.
 \end{rmk} 
 
-\subsection{}
+\subsection{Two claims}
 
 \begin{claim}
 Let $\mathbb{S}^1\to E\to B$ be an oriented $\mathbb{S}^1$-bundle over a compact manifold $B$.
@@ -144,7 +353,7 @@ Fix a trivialization
 $F\times \DD$ of the induced bundle. 
 Let 
 $m'\colon F\times \DD\to E''$ be the correspondent mapping. 
-By construction $m'(*,x)$ is a homeomorphism  between $F\times x$ and the fiber $F_{m(x)}$.
+By construction, $m'(*,x)$ is a homeomorphism  between $F\times x$ and the fiber $F_{m(x)}$.
 Then the map $f\colon E''\to E''$ is completely described by the map 
 $$f'\colon F\times \DD\to F\times \DD $$ 
 uniquely determined  by the  identity
@@ -165,7 +374,7 @@ has finite index.
 
 
 
-\subsection{}
+\subsection{Reliable manifolds}
 
 \begin{defn}
 A compact connected manifold $M$ is called \emph{reliable} if 
@@ -210,14 +419,14 @@ Consider the covering map $h\circ\iota\colon \tilde T^2\to E$.
 
 By the definition of a reliable manifold there is a covering $\iota\colon \tilde T^2\z\to \mathbb{S}^1\times \mathbb{S}^1$ and a map of solid torus $\bar f\colon \DD\times \mathbb{S}^1\z\to B$ and an isomorphism $i\colon \tilde T^2\to \partial \DD\times \mathbb{S}^1$ such that $\bar f\circ i=\bar h\circ\iota$. The pullback bundle $\mathbb{S}^1\to \tilde E'\to \DD\times \mathbb{S}^1$ is trivial. Let $s\co  \DD\times \mathbb{S}^1\to  \tilde E'$ be a section.
 
-By above 
-we have that $h\circ\iota$ is homotopic to a map
+From above, we have that $h\circ\iota$ is homotopic to a map
 $h'\colon \tilde T^2\to E$ whose projection to $B$ is the central $\mathbb{S}^1$ of 
 $\DD\times \mathbb{S}^1$. 
 Therefore there are loops $\psi\subset B$ and $\phi$ in a fiber $\mathbb{S}^1$  such that $h\circ\iota$ is homotopic to a torus with meridians in $s(\psi)$ and $\phi$.
 
 Suppose 
-$[\psi]$ has finite order in $\pi_1B$. By changing the cover $\tilde T\to T$ we can assume that $[\psi]=0$  in $\pi_1B$.  Then we can homotopy $h'$ to a single $\mathbb{S}^1$-fiber, and this easily gives the needed map of  a solid torus.
+$[\psi]$ has finite order in $\pi_1B$. By changing the cover $\tilde T\to T$ we can assume that $[\psi]=0$  in $\pi_1B$.
+Then we can homotop $h'$ to a single $\mathbb{S}^1$-fiber, and this easily gives the needed map of  a solid torus.
 
 %<<<<<<< HEAD
 %Otherwise, we have $i(\phi)\in \mathrm{Tor}(\pi_1E)$ 
@@ -388,7 +597,48 @@ $m(u,f^0(u),n)=m(u,f^n(u),0)$.
 In particular, by (\ref{eq:in-Tor-n}),
 the two maps $\DD\to E$ given by $u\mapsto m(u,f(u),0)$ and $u\mapsto m(u,f(u),n)$ are homotopic rel. to $\partial \DD$;
 denote by $s_t$, $t\in[0,1]$ the homotopy.
-It follows that after $n$-fold cover of $\widetilde T^2$ it has a section which can be contracted by a solid torus;
-the map of solid torus is a concatenation of $(u,t)\mapsto m(u,f(u),t)$ for $t\in[0,n]$ 
+It follows that after taking an $n$-fold cover of $\widetilde T^2$ it has a section which can be contracted by a solid torus;
+the map of the solid torus is a concatenation of $(u,t)\mapsto m(u,f(u),t)$ for $t\in[0,n]$ 
 and $(u,t)\to s_t(u)$ for $t\in[0,1]$. 
 \end{proof}
+
+\small
+\bibliographystyle{alpha}
+%\bibliography{master-july-2017}
+
+
+\begin{thebibliography}{HMR75}
+
+\bibitem[CG]{CG72}Cheeger, J.; Gromoll, D.
+ \textit{On the structure of complete manifolds of nonnegative curvature.}
+Ann. of Math. (2) 96 (1972), 413--443
+
+\bibitem[DDK]{DDK}{Dror, E. and Dwyer, W. G. and Kan, D. M.},
+ \textit{Self-homotopy equivalences of virtually nilpotent spaces},
+{Comment. Math. Helv.},
+{56},
+{1981},
+{4},
+pp. {599--614},
+
+\bibitem[FY]{FY}
+K.~Fukaya and T.~Yamaguchi.
+\newblock The fundamental groups of almost nonnegatively curved manifolds.
+\newblock {\em Ann. of Math. (2)}, 136(2):253--333, 1992.
+
+
+\bibitem[KPT]{KPT} Kapovitch, Vitali, Anton Petrunin, and Wilderich Tuschmann. 
+\newblock Nilpotency, almost nonnegative curvature, and the gradient flow on Alexandrov spaces. 
+\newblock Annals of Mathematics (2010), 343--373.
+
+\bibitem[W]{wilking}
+Wilking, Burkhard. \newblock On fundamental groups of manifolds of nonnegative curvature. \newblock  Differential Geom. Appl.  13  (2000),  no. 2, 129--165.
+
+\bibitem[Y]{Yam}
+T.~Yamaguchi.
+\newblock Collapsing and pinching under a lower curvature bound.
+\newblock {\em Ann. of Math.}, 133:317--357, 1991.
+\end{thebibliography}
+
+
+\end{document}

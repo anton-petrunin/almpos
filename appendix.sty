@@ -1,6 +1,4 @@
 \usepackage{latexsym}
-%\usepackage{epsfig,lpic}
-\numberwithin{equation}{subsection}
 \usepackage{amscd}
 \usepackage{amssymb}
 \usepackage{amsmath}
@@ -8,7 +6,7 @@
 \usepackage{enumerate}
 \usepackage{verbatim}
 
-
+\numberwithin{equation}{subsection}
 % Some personalized definitions
 
 \def\id{\operatorname{\rm id}}
@@ -40,7 +38,7 @@
 \mathsurround=1pt
 
 \renewcommand{\thesubsection}{\arabic{subsection}}
-\newtheorem{thm}{Theorem}
+\newtheorem{thm}{Theorem}[subsection]
 \newtheorem{cor}[thm]{Corollary}
 \newtheorem{quest}[thm]{Question}
 \newtheorem{lem}[thm]{Lemma}
